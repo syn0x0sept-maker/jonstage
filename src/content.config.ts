@@ -18,6 +18,7 @@ const diary = defineCollection({
     schema: z.object({
         title: z.string(),
         date: z.coerce.date(),
+        event_name: z.z.string().optional(),
     }),
 });
 

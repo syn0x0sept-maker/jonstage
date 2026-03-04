@@ -68,6 +68,9 @@ const breadcrumbs = [
                             <a class="link"
                                href={`/diary/${entry.data.date.toISOString().split('T')[0]}/`}>{entry.data.title}</a>
                         </h2>
+                        <h5 class="h5">
+                            <p>{entry.data.event_name}</p>
+                        </h5>
                         <time class="" datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
                         <div class="mt-3 content">
                             <Content/>

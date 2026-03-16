@@ -61,10 +61,12 @@ const breadcrumbs = [
                     <li class="breadcrumb-item">{entry.data.title}</li>
                 </ol>
                 <h1 class="h1 mb-2">{entry.data.title}</h1>
-                <h5 class="h5">
-                    <p>{entry.data.event_name}</p>
-                </h5>
-                <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+                <div class="hstack g-3">
+                    {entry.data.event_name && (
+                            <p class="order-2"><i class="ail-documents"></i> {entry.data.event_name}</p>
+                    )}
+                    <time class="order-1" datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+                </div>
             </header>
             <div class="mt-4 content container-sm">
                 <Content/>

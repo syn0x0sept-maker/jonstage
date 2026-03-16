@@ -27,8 +27,7 @@ JonStageは次のフォルダとファイルで構成されています。
 │   ├── content.config.ts
 │   ├── layouts
 │   └── pages
-├── tsconfig.json
-└── wrangler.jsonc
+└── tsconfig.json
 ```
 ## コンテンツ構造
 

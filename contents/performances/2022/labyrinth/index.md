@@ -39,14 +39,6 @@ image: "./hero.avif"
 
 大阪市立芸術創造館
 
-★以下本ビラのみ記載★
-
-〒535-0003 大阪市旭区中宮1-11-14
-
-URL：http://www.artcomplex.net/art-space
-
-TEL：06-6955-1066
-
 ## アクセス
 
 Osaka Metro谷町線「千林大宮」駅下車

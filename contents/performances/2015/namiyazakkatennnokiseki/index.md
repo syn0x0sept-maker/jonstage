@@ -1,6 +1,6 @@
 ---
-title: "カラフルメリィでオハヨ"
-date: "2014-8-30"
+title: "月曜から寝ぼすけ　ナツヤスミ語辞典"
+date: "2015-8-17"
 playwright: ""
 director: ""
 excerpt: ""

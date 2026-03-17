@@ -1,5 +1,5 @@
 ---
-title: "コズミックラテ"
+title: "野獣郎見参！～BEAST IS RED～"
 date: "2015-2-13"
 playwright: "高見健次・川浪ナミヲ"
 director: "パピー"

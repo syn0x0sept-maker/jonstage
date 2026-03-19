@@ -13,11 +13,11 @@
     "@astrojs/cloudflare": "^13.1.2",
     "@astrojs/sitemap": "^3.7.1",
     "asagaoui": "^0.1.8",
-    "astro": "^6.0.5",
+    "astro": "^6.0.6",
     "sass": "^1.98.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "wrangler": "^4.74.0"
+    "wrangler": "^4.75.0"
   }
 }

@@ -1,14 +1,28 @@
-# JonStage
+# JonStage — 劇団万絵巻 公式ウェブサイト
 
-## Yoroduwemaki(万絵巻) Official Website
+JonStageは、関西大学演劇サークル **劇団万絵巻(Yoroduwemaki)** の公式ウェブサイトプロジェクトです。  
+2006年から蓄積されてきた劇団員日記・過去公演情報など、劇団万絵巻のほぼすべての記録を収めています。
 
-関西大学演劇サークル劇団万絵巻の公式ウェブサイトのプロジェクト
+## 目次
+
+- [技術スタック](#技術スタック)
+- [プロジェクト構造](#プロジェクト構造)
+- [コンテンツ構造](#コンテンツ構造)
+- [コマンド一覧](#コマンド一覧)
+- [貢献](#貢献)
+- [謝辞](#謝辞)
+
+## 技術スタック
+
+| 役割      | 技術                               |
+|---------|----------------------------------|
+| フレームワーク | [Astro](https://astro.build)     |
+| UI      | [AsagaoUI](https://asagaoui.com) |
+| スタイル    | [SCSS](https://sass-lang.com)    |
+
+軽量・高速・メンテナンスしやすい構成を目指して設計しています。
 
 ## プロジェクト構造
-
-[Astro](https://astro.build/)をベースに、軽量で高速、かつメンテナンスしやすい構成で設計しています。
-
-JonStageは次のフォルダとファイルで構成されています。
 
 ```text
 /
@@ -16,36 +30,42 @@ JonStageは次のフォルダとファイルで構成されています。
 ├── README.md
 ├── astro.config.mjs
 ├── contents
-│   ├── blog/
-│   ├── diary/
-│   └── performances/
+│   ├── blog/           # ブログ記事
+│   ├── diary/          # 劇団員日記
+│   └── performances/   # 公演情報
 ├── package.json
 ├── public/
 ├── src
-│   ├── assets
-│   ├── components
-│   ├── content.config.ts
-│   ├── layouts
-│   └── pages
+│   ├── assets
+│   ├── components
+│   ├── content.config.ts
+│   ├── layouts
+│   └── pages
 └── tsconfig.json
 ```
+
 ## コンテンツ構造
 
-JonStageは、`contents`フォルダの中に次のようなコンテンツ構造で構成されています。
+> [!IMPORTANT]
+> コンテンツは**年度単位ではなく、実際の年(カレンダー年)単位**で管理してください。
 
-- `/blog/`: ブログ記事を格納するフォルダ
-- `/diary/`: 劇団員日記を格納するフォルダ
-- `/performances/`: 公演を格納するフォルダ
+`contents/` フォルダは次の3種類のコンテンツで構成されています。
+
+| フォルダ            | 内容    |
+|-----------------|-------|
+| `blog/`         | ブログ記事 |
+| `diary/`        | 劇団員日記 |
+| `performances/` | 公演情報  |
 
 ### Blog
 
-ブログ記事コンテンツ構造は現在作成中です。
+> ブログ記事のコンテンツ構造は現在作成中です。
 
-### Diary
+### Diary（劇団員日記）
 
-劇団員日記には次のようなフロントマターを設定してください。
+各ファイルに以下のフロントマターを設定してください。
 
-```text
+```yaml
 ---
 title: "2025年度新人発表公演終了のお知らせ"
 date: 2026-03-15
@@ -53,43 +73,78 @@ event_name: "2025年度新人発表公演"
 ---
 ```
 
-- title: 日記のタイトルを設定してください。必須項目です。
-- date: 日記の日付をYYYY-MM-DD形式で設定してください。必須項目です。
-- event_name: 日記に関連する公演の名前(カテゴリ)を入力してください。任意項目です。
+| フィールド        | 必須 | 説明                   |
+|--------------|:--:|----------------------|
+| `title`      | ✅  | 日記のタイトル              |
+| `date`       | ✅  | 投稿日（`YYYY-MM-DD` 形式） |
+| `event_name` | —  | 関連する公演名（カテゴリとして使用）   |
 
-### Performances
+### Performances（公演情報）
 
-公演コンテンツの作成方法については現在検討中です
+各ファイルに以下のフロントマターを設定してください。
 
-## コマンド
+```yaml
+---
+name: "公演のタイトル"
+startDate: 2019-07-01
+endDate: 2019-07-26
+venue:
+  name: "劇場名"
+  address: "東京都渋谷区..."
+playwright: "劇作家（脚本家）"
+director: "演出"
+excerpt: "この公演のあらすじや説明"
+flyer:
+  front: "./poster-front.jpg"
+  back: "./poster-back.jpg"
+thumbnail: "./hero.avif"
+offers:
+  - label: "前売り一般"
+    price: 1500
+  - label: "当日一般"
+    price: 2000
+  - label: "学生"
+    price: 1000
+  - label: "無料招待"
+    price: 0
+---
+```
 
-すべてのコマンドは、プロジェクトのルートディレクトリで実行してください。
+| フィールド           | 必須 | 説明                                              |
+|-----------------|:--:|-------------------------------------------------|
+| `name`          | ✅  | 公演名                                             |
+| `startDate`     | ✅  | 公演開始日（`YYYY-MM-DD` 形式）                          |
+| `endDate`       | —  | 公演終了日（`YYYY-MM-DD` 形式）                          |
+| `venue.name`    | —  | 会場名                                             |
+| `venue.address` | —  | 会場住所                                            |
+| `playwright`    | —  | 作家・脚本家名                                         |
+| `director`      | —  | 演出名                                             |
+| `excerpt`       | —  | あらすじ・紹介文                                        |
+| `flyer.front`   | —  | ビラ表面の画像パス                                       |
+| `flyer.back`    | —  | ビラ裏面の画像パス                                       |
+| `thumbnail`     | —  | サムネイル画像パス                                       |
+| `offers`        | —  | 料金情報（配列）。`label` にチケット種別、`price` に金額（円・数字のみ）を入力 |
 
-| Command                   | Action                                    |
-|:--------------------------|:------------------------------------------|
-| `npm install`             | 依存関係をインストール                               |
-| `npm run dev`             | `localhost:4321`でローカル開発サーバーを起動            |
-| `npm run build`           | `./dist/`に本番サイトをビルド                       |
-| `npm run preview`         | デプロイする前にローカルでビルドをプレビュー                    |
-| `npm run astro ...`       | `astro add`、`astro check` などの CLI コマンドを実行 |
-| `npm run astro -- --help` | Astro CLI の使用に関するヘルプ                      |
+## コマンド一覧
 
-## 技術スタック
+すべてのコマンドは、**プロジェクトのルートディレクトリ**で実行してください。
 
-- フレームワーク: [Astro](https://astro.build/)
-- UI: [AsagaoUI](https://asagaoui.com)
-- スタイル: [SCSS](https://sass-lang.com/)
-
-## 団員のみなさんへ
-
-JonStageはJonによって設計と構築され、2006年からの劇団員日記、過去の公演情報などの劇団万絵巻が生み出したほぼすべてのデータが蓄積されたプロジェクトです。
+| コマンド                      | 処理内容                                            |
+|---------------------------|-------------------------------------------------|
+| `npm install`             | 依存関係をインストール                                     |
+| `npm run dev`             | `localhost:4321` でローカル開発サーバーを起動                 |
+| `npm run build`           | `./dist/` に本番用サイトをビルド                           |
+| `npm run preview`         | デプロイ前にビルド結果をローカルでプレビュー                          |
+| `npm run astro ...`       | `astro add`・`astro check` などの Astro CLI コマンドを実行 |
+| `npm run astro -- --help` | Astro CLI のヘルプを表示                               |
 
 ## 貢献
 
-JonStageは、劇団員・OB/OG・関係者の手によって開発されています。改善案・修正・新機能の提案は大歓迎です。
+JonStageは、劇団員・OB/OG・関係者の手によって開発されています。  
+改善案・バグ修正・新機能の提案はいつでも歓迎します。お気軽にどうぞ。
 
 ## 謝辞
 
-Jonを始め、開発メンバー、劇団万絵巻団員一同に感謝します。
+設計・構築を担当した **Jon**、開発メンバー、そして劇団万絵巻団員一同に感謝します。
 
 © 1994 Yoroduwemaki / Designed & Developed by Hiroshi ISOBE.

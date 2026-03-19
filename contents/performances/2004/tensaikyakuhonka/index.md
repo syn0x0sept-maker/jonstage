@@ -4,7 +4,7 @@ date: "2004-11-12"
 playwright: ""
 director: ""
 excerpt: ""
-image: "./hero.avif"
+image: "./ogp.png"
 ---
 
 ## あらすじ

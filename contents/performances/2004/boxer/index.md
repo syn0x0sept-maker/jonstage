@@ -1,14 +1,5 @@
 ---
-title: "ボクサァ"
-date: "2004-04-14"
-playwright: ""
-director: ""
-excerpt: ""
-image: "./ogp.png"
+name: "ボクサァ"
+startDate: 2004-04-14
+category: "2004年度新入生歓迎公演"
 ---
-
-## あらすじ
-## 日時
-## 場所
-## 料金
-

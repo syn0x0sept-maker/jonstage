@@ -1,14 +1,5 @@
 ---
-title: "天才脚本家"
-date: "2004-11-12"
-playwright: ""
-director: ""
-excerpt: ""
-image: "./ogp.png"
+name: "天才脚本家"
+startDate: 2004-11-12
+category: "2004年度卒業公演"
 ---
-
-## あらすじ
-## 日時
-## 場所
-## 料金
-

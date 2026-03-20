@@ -89,6 +89,7 @@ event_name: "2025年度新人発表公演"
 name: "公演のタイトル"
 startDate: 2019-07-01
 endDate: 2019-07-26
+category: "2006年度秋公演"
 venue:
   name: "劇場名"
   address: "東京都渋谷区..."

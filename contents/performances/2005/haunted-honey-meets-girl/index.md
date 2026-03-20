@@ -1,10 +1,20 @@
 ---
-title: "Haunted Honey Meets Girl"
-date: "2005-12-08"
-playwright: ""
-director: ""
+name: "Haunted Honey Meets Girl"
+startDate: 2005-12-08
+endDate: 2005-12-10
+category: "2006年度秋公演"
+venue:
+  name: "クロスパル高槻"
+  address: "大阪府高槻市紺屋町1番2号"
 excerpt: "そこは、雷鳴轟く古びた館。一人の博士と一人の助手。天才科学者（自称）ブィクター=フランケンタインシュ、美少女ポニー=ポニー。彼らの世紀の開発が、ゆっくりはげしく動き出す！そして生まれたところを遠く離れて新たな命。つめたい身体にあったかハート。心を持った人造人間・ハインリッヒ。幼いハインが次々と出会う、愉快でこわ？い館の仲間。どこかおかしな怪物たち。君たちほんとにモンンター！？"
-image: "./shosai.avif"
+thumbnail: "./shosai.avif"
+offers:
+  - label: "前売"
+    price: 500
+  - label: "Web予約"
+    price: 500
+  - label: "当日"
+    price: 800
 ---
 
 ## 日時
@@ -38,6 +48,6 @@ Web予約:500円
 
 ※当日、学生証を提示していただくと前売り料金でご覧いただけます。
 
-![4団体公演ポスター](./arasuji.avif)
+![4団体公演ポスター](arasuji.avif)
 
 

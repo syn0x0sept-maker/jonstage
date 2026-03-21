@@ -15,27 +15,24 @@ const {performance} = Astro.props;
 const {Content} = await render(performance);
 
 const performanceData = {
-    title: performance.data.title,
-    date: new Date(performance.data.date).toISOString(),
-    excerpt: performance.data.excerpt,
-    image: performance.data.image.src,
-    director: performance.data.director,
-    offers: {
-        price: 0,
-        url: Astro.url.href
-    }
+    name: performance.data.name,
+    startDate: new Date(performance.data.startDate).toISOString(),
+    endDate: performance.data.endDate ? new Date(performance.data.endDate).toISOString() : undefined,
+    description: performance.data.excerpt,
+    location: performance.data.venue,
+    offers: performance.data.offers,
 };
 
 const breadcrumbs = [
     {name: '公演', item: '/performances/'},
-    {name: performance.data.title, item: Astro.url.pathname}
+    {name: performance.data.name, item: Astro.url.pathname}
 ];
 ---
 
 <Layout
-        title={performance.data.title + " - 公演"}
-        description={performance.data.excerpt}
-        image={performance.data.image.src}
+        title={performance.data.name + " - 公演"}
+        description={performance.data.excerpt || ''}
+        image={performance.data.flyer?.front?.src || performance.data.thumbnail?.src}
         type="article"
         schemaType="Event"
         schemaData={performanceData}
@@ -47,31 +44,48 @@ const breadcrumbs = [
                 <ol class="breadcrumb mb-2">
                     <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">ホーム</a></li>
                     <li class="breadcrumb-item"><a class="breadcrumb-link" href="/performances/">公演</a></li>
-                    <li class="breadcrumb-item">{performance.data.title}</li>
+                    <li class="breadcrumb-item">{performance.data.name}</li>
                 </ol>
-                <h1 class="h1 mb-2">{performance.data.title}</h1>
-                <time datetime={new Date(performance.data.date).toISOString().split('T')[0]} class="">
-                    {new Date(performance.data.date).toLocaleDateString('ja-JP', {
+                <h1 class="h1 mb-2">{performance.data.name}</h1>
+                <time datetime={new Date(performance.data.startDate).toISOString().split('T')[0]} class="">
+                    {new Date(performance.data.startDate).toLocaleDateString('ja-JP', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                     })}
+                    {performance.data.endDate && ` - ${new Date(performance.data.endDate).toLocaleDateString('ja-JP', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })}`}
                 </time>
-                <dl class="mt-2 d-flex flex-wrap">
-                    <dt class="mr-2">作:</dt>
-                    <dd class="mr-4">{performance.data.playwright}</dd>
-                    <dt class="mr-2">演出:</dt>
-                    <dd class="">{performance.data.director}</dd>
-                </dl>
+                {(performance.data.playwright || performance.data.director) && (
+                    <dl class="mt-2 d-flex flex-wrap">
+                        {performance.data.playwright && (
+                            <>
+                                <dt class="mr-2">作:</dt>
+                                <dd class="mr-4">{performance.data.playwright}</dd>
+                            </>
+                        )}
+                        {performance.data.director && (
+                            <>
+                                <dt class="mr-2">演出:</dt>
+                                <dd class="">{performance.data.director}</dd>
+                            </>
+                        )}
+                    </dl>
+                )}
             </header>
             <div class="container-lg custom-performances-area mt-4">
-                <div class="custom-performances-img">
-                    <Image
-                            src={performance.data.image}
-                            alt={performance.data.title}
-                            class="img-fluid"
-                    />
-                </div>
+{(performance.data.flyer?.front || performance.data.thumbnail) && (
+                    <div class="custom-performances-img">
+                        <Image
+                                src={performance.data.flyer?.front || performance.data.thumbnail!}
+                                alt={performance.data.name}
+                                class="img-fluid"
+                        />
+                    </div>
+                )}
                 <div class="content custom-performances-content">
                     <Content/>
                 </div>

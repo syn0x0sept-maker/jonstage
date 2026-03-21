@@ -6,20 +6,8 @@ import Layout from '../../layouts/Layout.astro';
 const allPerformances = await getCollection('performances');
 
 const sortedPerformances = allPerformances.sort((a: CollectionEntry<'performances'>, b: CollectionEntry<'performances'>) => {
-    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+    return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
 });
-
-const performancesByYear = sortedPerformances.reduce((acc: Record<number, CollectionEntry<'performances'>[]>, performance: CollectionEntry<'performances'>) => {
-    const date = new Date(performance.data.date);
-    const year = date.getFullYear();
-    if (!acc[year]) {
-        acc[year] = [];
-    }
-    acc[year].push(performance);
-    return acc;
-}, {} as Record<number, CollectionEntry<'performances'>[]>);
-
-const years = Object.keys(performancesByYear).map(Number).sort((a: number, b: number) => b - a);
 
 const itemListData = {
     items: sortedPerformances.map(p => ({
@@ -43,41 +31,6 @@ const breadcrumbs = [
         <section class="container-md mt-5">
             <h1 class="h1">公演</h1>
         </section>
-        {years.map((year: number) => (
-                <section class="container-md mt-4">
-                    <h2 id={year.toString()} class="h2">{year}年</h2>
-                    <div class="mt-3 vstack g-4">
-                        {performancesByYear[year].map((performance: CollectionEntry<'performances'>) => (
-                                <article class="custom-card">
-                                    <div class="custom-card__data">
-                                        <h3 class="h2">{performance.data.title}</h3>
-                                        <time datetime={new Date(performance.data.date).toISOString().split('T')[0]}>
-                                            {new Date(performance.data.date).toLocaleDateString('ja-JP', {
-                                                year: 'numeric',
-                                                month: 'long',
-                                                day: 'numeric'
-                                            })}
-                                        </time>
-                                        <p>{performance.data.excerpt}</p>
-                                        <div class="hstack g-3">
-                                            <ul>
-                                                <li>作：{performance.data.playwright}</li>
-                                                <li>演出：{performance.data.director}</li>
-                                            </ul>
-                                        </div>
-                                        <a class="btn btn-fill is-sm"
-                                           href={`/performances/${performance.id}/`}>詳しくみる</a>
-                                    </div>
-                                    <div class="custom-card__img-area">
-                                        <Image class="custom-card__img" src={performance.data.image}
-                                               alt={performance.data.title}/>
-                                    </div>
-                                </article>
-                        ))}
-                    </div>
-                </section>
-        ))}
-
         <section class="bg-grey-100 py-6 mt-6">
             <div class="container-sm">
                 <h2 class="h2 mb-3">私たちの公演の歴史</h2>

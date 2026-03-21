@@ -1,10 +1,16 @@
 ---
-title: "Leaving　School～振り返らずに、胸をはって～"
-date: "2007-04-11"
+name: "Leaving　School～振り返らずに、胸をはって～"
+startDate: 2007-04-11
+category: "2007年度新入生歓迎公演"
+venue:
+  name: "高槻キャンパスC棟"
+  address: "大阪府高槻市霊仙寺町2丁目1番1号"
 playwright: "阿部順"
 director: "永井大雅"
-excerpt: "新歓コンパ"
-image: "./hero.avif"
+thumbnail: "./welcome.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## 日時

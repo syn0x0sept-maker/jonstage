@@ -107,7 +107,7 @@ offers:
     price: 2000
   - label: "学生"
     price: 1000
-  - label: "無料招待"
+  - label: "無料"
     price: 0
 ---
 ```

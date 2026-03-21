@@ -2,6 +2,7 @@
 import {getCollection, render, type CollectionEntry} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import {Image} from 'astro:assets';
+import ogpImage from '../../assets/ogp.avif';
 
 export async function getStaticPaths() {
     const performances = await getCollection('performances');
@@ -14,13 +15,18 @@ export async function getStaticPaths() {
 const {performance} = Astro.props;
 const {Content} = await render(performance);
 
+const displayImage = performance.data.thumbnail ?? performance.data.flyer?.front ?? ogpImage;
+
 const performanceData = {
     name: performance.data.name,
     startDate: new Date(performance.data.startDate).toISOString(),
-    endDate: performance.data.endDate ? new Date(performance.data.endDate).toISOString() : undefined,
-    description: performance.data.excerpt,
-    location: performance.data.venue,
-    offers: performance.data.offers,
+    excerpt: performance.data.excerpt,
+    image: displayImage.src,
+    director: performance.data.director,
+    offers: performance.data.offers?.map(offer => ({
+        price: offer.price,
+        priceCurrency: 'JPY'
+    }))
 };
 
 const breadcrumbs = [
@@ -31,8 +37,8 @@ const breadcrumbs = [
 
 <Layout
         title={performance.data.name + " - 公演"}
-        description={performance.data.excerpt || ''}
-        image={performance.data.flyer?.front?.src || performance.data.thumbnail?.src}
+        description={performance.data.excerpt}
+        image={displayImage.src}
         type="article"
         schemaType="Event"
         schemaData={performanceData}
@@ -53,39 +59,38 @@ const breadcrumbs = [
                         month: 'long',
                         day: 'numeric'
                     })}
-                    {performance.data.endDate && ` - ${new Date(performance.data.endDate).toLocaleDateString('ja-JP', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    })}`}
                 </time>
-                {(performance.data.playwright || performance.data.director) && (
-                    <dl class="mt-2 d-flex flex-wrap">
-                        {performance.data.playwright && (
-                            <>
-                                <dt class="mr-2">作:</dt>
-                                <dd class="mr-4">{performance.data.playwright}</dd>
-                            </>
-                        )}
-                        {performance.data.director && (
-                            <>
-                                <dt class="mr-2">演出:</dt>
-                                <dd class="">{performance.data.director}</dd>
-                            </>
-                        )}
-                    </dl>
-                )}
+                <dl class="mt-2 d-flex flex-wrap">
+                    <dt class="mr-2">作:</dt>
+                    <dd class="mr-4">{performance.data.playwright}</dd>
+                    <dt class="mr-2">演出:</dt>
+                    <dd class="">{performance.data.director}</dd>
+                </dl>
             </header>
             <div class="container-lg custom-performances-area mt-4">
-{(performance.data.flyer?.front || performance.data.thumbnail) && (
-                    <div class="custom-performances-img">
+                <div class="custom-performances-img">
+                    {performance.data.flyer?.front && (
                         <Image
-                                src={performance.data.flyer?.front || performance.data.thumbnail!}
-                                alt={performance.data.name}
-                                class="img-fluid"
+                            src={performance.data.flyer.front}
+                            alt={`${performance.data.name} フライヤー表`}
+                            class="img-fluid"
                         />
-                    </div>
-                )}
+                    )}
+                    {performance.data.flyer?.back && (
+                        <Image
+                            src={performance.data.flyer.back}
+                            alt={`${performance.data.name} フライヤー裏`}
+                            class="img-fluid mt-3"
+                        />
+                    )}
+                    {!performance.data.flyer && performance.data.thumbnail && (
+                        <Image
+                            src={performance.data.thumbnail}
+                            alt={performance.data.name}
+                            class="img-fluid"
+                        />
+                    )}
+                </div>
                 <div class="content custom-performances-content">
                     <Content/>
                 </div>

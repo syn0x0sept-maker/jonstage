@@ -9,7 +9,10 @@ venue:
 playwright: "ナツメクニオ"
 director: "だりや"
 excerpt: "昏睡状態に陥った少女。自らを魔導士と名乗る男が現れ、父親と共に彼女の心の中へとダイブする。そこはギミックに満ちた迷宮のような世界。案内役の少女ラノンと共に巡る中で明かされる、真実の理由とは。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
+thumbnail: "./thumbnail.avif"
 offers:
   - label: "一般当日"
     price: 1200

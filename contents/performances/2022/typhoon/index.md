@@ -9,7 +9,8 @@ venue:
 playwright: "つむぎ日向"
 director: "先生"
 excerpt: "廃部の危機に瀕した映画研究部。部の存続をかけた、ある夏の日の奮闘記。映画の魅力で危機を乗り越えられるのか！？"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
 offers:
   - label: "無料"
     price: 0

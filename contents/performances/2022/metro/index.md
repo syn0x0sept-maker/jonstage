@@ -2,16 +2,17 @@
 name: "METRO"
 startDate: 2022-06-10
 endDate: 2022-06-12
-category: "2022年度新入生歓迎公演"
+category: "2022年度高槻キャンパス公演"
 venue:
   name: "関西大学高槻キャンパス TG101教室"
   address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "岡崎マサフミ"
 director: "ハブられメタル"
 excerpt: "地上で暮らせない者たちが巣食う巨大地下都市【メトロ】。再スタートを切りたい者、失くしたものを探す者。飛び交う契約と労働、策謀と使命の中で、太陽の昇らない天井を見上げて生きる住人たちの物語。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
 offers:
-  - label: "無料(カンパ制)"
+  - label: "無料"
     price: 0
 ---
 

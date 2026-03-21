@@ -1,18 +1,22 @@
 ---
 name: "君が感じれば、世界は"
 startDate: 2023-05-28
-category: "2023年度高槻キャンパス祭"
+category: "2023年度高槻キャンパス祭公演"
 venue:
   name: "関西大学高槻キャンパス 体育館(G棟)G101教室"
   address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "渡邉意志"
 director: "消し炭ショコラ"
 excerpt: "ゾンビのはびこる終末世界で、生き残りの人間とゾンビが遭遇！？しかし物語は壮絶なサバイバルではなく、予想外の「演劇指南プログラム」へと展開する！？ゾンビと人間が織りなす異色の物語。"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
 thumbnail: "./hero.avif"
 offers:
   - label: "無料"
     price: 0
 ---
+
 ## あらすじ
 
 ゾンビのはびこる終末世界。

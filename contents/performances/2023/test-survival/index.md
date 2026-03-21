@@ -1,14 +1,15 @@
 ---
 name: "テストサバイバル"
 startDate: 2023-05-27
-category: "2023年度高槻キャンパス祭"
+category: "2023年度高槻キャンパス祭公演"
 venue:
-  name: "関西大学高槻キャンパス"
+  name: "関西大学高槻キャンパス 体育館(G棟)G101教室"
   address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "中島麻理亜"
 director: "ヴィクセン"
 excerpt: "2023年度の高槻キャンパス祭で上演された「テストサバイバル」の公演情報です。テスト勉強をかけた戦いが今始まる！"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
 offers:
   - label: "無料"
     price: 0
@@ -33,3 +34,4 @@ offers:
 - 犀音
 - back LMS
 - シェーレ皐月
+

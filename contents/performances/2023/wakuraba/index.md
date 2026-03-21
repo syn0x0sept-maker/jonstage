@@ -1,6 +1,7 @@
 ---
 name: "邂逅"
 startDate: 2023-10-14
+endDate: 2023-10-15
 category: "2023年度秋公演"
 venue:
   name: "大阪市立芸術創造館"
@@ -8,7 +9,10 @@ venue:
 playwright: "浅葱"
 director: "浅葱"
 excerpt: "殺伐とした街の片隅。少年が出会った不思議な少女。彼女が歩む軌跡を辿り、運命に抗い続ける者たちが描くストーリー。生きてさえいれば、またあの日みたいに。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
+thumbnail: "./thumbnail.avif"
 offers:
   - label: "一般当日"
     price: 1800
@@ -40,12 +44,12 @@ offers:
 
 2023年
 
-12月16日(土)
+12月14日(土)
 
 - 1st 14:00〜
 - 2st 19:00〜
 
-12月17日(日)
+12月15日(日)
 
 - 3st 12:00〜
 - 4st 16:00〜

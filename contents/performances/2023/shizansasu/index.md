@@ -2,14 +2,17 @@
 name: "シザンサス"
 startDate: 2023-02-10
 endDate: 2023-02-11
-category: "2022年度卒業公演"
+category: "2022年度新人発表公演"
 venue:
   name: "茨木市立男女共生センターローズWAM ワムホール"
   address: "大阪府茨木市元町4-7"
 playwright: "モンスターまさき"
 director: "モンスターまさき"
 excerpt: "ある一人の女が警察に出頭した。「子供を誘拐した」と。14年前の誘拐事件と現在が交錯し、関係者たちは一軒のシェアハウスへと導かれていく。そこで明かされる真相と秘密。人と人をつなぐシザンサスの花が意味するものとは。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./poster-front.avif"
+  back: "./poster-back.avif"
+thumbnail: "./thumbnail.avif"
 offers:
   - label: "無料"
     price: 0

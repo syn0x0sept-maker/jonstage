@@ -2,7 +2,7 @@
 name: "魔王様には休暇がある"
 startDate: 2021-06-27
 endDate: 2021-07-03
-category: "2021年度夏公演"
+category: "2021年度バーチャル公演"
 venue:
   name: "YouTube (オンライン配信)"
 playwright: "黒い白クマ"
@@ -10,7 +10,7 @@ director: "撫子"
 excerpt: "魔王城に迫る勇者たち！四天王の一人が倒されたピンチの中、なんと魔王様は有休消化中！？投獄した勇者が城内観光を始める始末。おバカな四天王たちが贈るドタバタコメディ！"
 thumbnail: "./hero.avif"
 offers:
-  - label: "無料(カンパ制)"
+  - label: "無料"
     price: 0
 ---
 
@@ -25,6 +25,8 @@ offers:
 残された四天王3人はこのピンチをどう脱却するのか！
 
 ちょっとおバカな四天王たちが送るドタバタコメディ！！
+
+![](./arasuji.avif)
 
 ## 日時
 
@@ -63,3 +65,7 @@ YouTube
 広報：コルP
 
 制作：花子
+
+![](./staff.avif)
+
+![](./kotoba.avif)

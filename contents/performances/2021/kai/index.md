@@ -9,7 +9,10 @@ venue:
 playwright: "白樺葵"
 director: "ジキル"
 excerpt: "鬼の一族と、それを滅ぼそうとする人との戦乱の世。激化する戦争、交差する思い。争い合う二つの種族に生まれた生き様、憎しみ、そして愛。この戦争の終末にあるものとは一体何なのか。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
+thumbnail: "./thumbnail.avif"
 offers:
   - label: "一般当日"
     price: 1500

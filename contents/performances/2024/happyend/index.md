@@ -1,13 +1,16 @@
 ---
 name: "ハッピーエンドの創り方"
 startDate: 2024-04-28
-category: "2024年度新入生歓迎公演"
+category: "2024年度高槻キャンパス祭公演"
 venue:
   name: "関西大学高槻キャンパス 体育館(G棟)G101教室"
   address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "かしわみょうが"
 director: "まつり"
 excerpt: "「何度時間を戻してもヒロインを救えない」地獄のようなループの中で問われる、物語の中の人々の生。ハッピーエンドを創ることはできるのか？万絵巻が贈る、切なくも鋭い物語。"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
 thumbnail: "./hero.avif"
 offers:
   - label: "無料(カンパ制)"

@@ -9,7 +9,10 @@ venue:
 playwright: "山中正也"
 director: "MP"
 excerpt: "1867年、王政復古。倒幕派と佐幕派が睨み合う中、突如現れた秘宝『宝玉』。全てを集めれば願いが叶うというその存在が、時代をめぐる熾烈な争いを加速させていく。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./poster-front.avif"
+  back: "./poster-back.avif"
+thumbnail: "./thumbnail.avif"
 offers:
   - label: "一般当日"
     price: 1800

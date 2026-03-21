@@ -2,13 +2,16 @@
 name: "精霊のAGEHA"
 startDate: 2024-12-06
 endDate: 2024-12-08
-category: "2024年度冬公演"
+category: "2024年度卒業公演"
 venue:
   name: "大阪市立芸術創造館"
   address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "モンスターまさき"
 director: "モンスターまさき"
 excerpt: "宗教法人「精霊の社」の闇を暴くため調査を開始した弁護士ユキナガ。しかし、そこで果たした思いもよらぬ出会いが、やがて運命の歯車を狂わせていく。"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
 thumbnail: "./hero.avif"
 offers:
   - label: "一般当日"
@@ -101,16 +104,13 @@ Osaka Metro谷町線「千林大宮」駅下車
 - MP
 - 鬼灯
 - 中原MIK
-
 - 無笛
 - アドニス・ハヤト
 - ポイズンマスター
 - 慧流
 - イド
-
 - 犀音
 - シャミネ
-
 - うしみつ
 - まつり
 - もぎ
@@ -124,10 +124,8 @@ Osaka Metro谷町線「千林大宮」駅下車
 - コン
 - つゆ
 - のぼーる3号
-
 - モンスターまさき
 - だ。
-
 - 消し炭ショコラ
 - たゆたゆ
 

@@ -2,16 +2,19 @@
 name: "奈落の底には"
 startDate: 2024-06-15
 endDate: 2024-06-16
-category: "2024年度高槻キャンパス祭"
+category: "2024年度6月公演"
 venue:
   name: "関西大学高槻キャンパス 体育館(G棟)G101教室"
   address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "中原MIK"
 director: "中原MIK"
 excerpt: "死んだらどこへ行くのだろう。亡くなった人が集うバー『冥界』。そこには複雑なルールと事情を抱えた人々が存在する。生と死の狭間で繰り広げられる、切なくも温かい物語。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./hero.avif"
+  back: "./poster-back.avif"
+thumbnail: "./thumbnail.avif"
 offers:
-  - label: "無料(カンパ制)"
+  - label: "無料"
     price: 0
 ---
 

@@ -1,10 +1,18 @@
 ---
-title: "咲かないスイートピー"
-date: "2025-03-13"
+name: "咲かないスイートピー"
+startDate: 2025-02-22
+endDate: 2025-02-23
+category: "2024年度卒業公演"
+venue:
+  name: "茨木市立男女共生センターローズWAM ワムホール"
+  address: "大阪府茨木市元町4-7"
 playwright: "ダッシャー"
 director: "ダッシャー"
-excerpt: ""
-image: "./hero.avif"
+excerpt: "2024年度の卒業公演「咲かないスイートピー」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料(カンパ制)"
+    price: 0
 ---
 
 ## 日時

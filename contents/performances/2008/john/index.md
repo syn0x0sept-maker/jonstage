@@ -1,10 +1,17 @@
 ---
-title: "フューJohn"
-date: "2008-08-23"
-playwright: "ダンサー"
-director: "ダンサー"
-excerpt: "某国の中央街、ロンドシティ。色とりどりの夢が弾け、芸術も思想もひしめき合うこの街には、裏社会を牛耳るギャングたちが暗躍している。その頂点に立つのが、最強と名高い組織「アルカディア」。だがある日、街を震わせる急報が響き渡った。「——アルカディアのボス、ジニアが死んだ」、と。"
-image: "./hero.avif"
+name: "フューJohn"
+startDate: 2008-08-23
+category: "2008年度公演"
+venue:
+  name: "関西大学高槻キャンパス 高岳館 大教室"
+  address: "大阪府高槻市霊仙寺町2-1-1"
+playwright: "万絵巻"
+director: "万絵巻"
+excerpt: "2008年度に上演された「フューJohn」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## 日時

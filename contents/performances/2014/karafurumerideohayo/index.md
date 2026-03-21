@@ -1,10 +1,17 @@
 ---
-title: "カラフルメリィでオハヨ"
-date: "2014-8-30"
-playwright: ""
-director: ""
-excerpt: ""
-image: "./hero.avif"
+name: "カラフルメリィでオハヨ"
+startDate: 2014-08-30
+category: "2014年度夏公演"
+venue:
+  name: "関西大学高槻キャンパス"
+  address: "大阪府高槻市霊仙寺町2-1-1"
+playwright: "万絵巻"
+director: "万絵巻"
+excerpt: "2014年度の夏公演「カラフルメリィでオハヨ」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## メンバー一覧

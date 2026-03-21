@@ -1,10 +1,24 @@
 ---
-title: "c・c"
-date: "2015-10-17"
+name: "Fly Again"
+startDate: 2015-10-16
+endDate: 2015-10-18
+category: "2015年度秋公演"
+venue:
+  name: "OVAL THEATER"
+  address: "大阪府大阪市阿倍野区阿倍野筋2-4-45"
 playwright: "アルゴ"
 director: "アルゴ"
-excerpt: "長きに渡り西国と対立していた東国そこに所属するエリート戦闘集団「特務部隊」隊長の名は、真そしてそのフライトに憧れ、空に希望を抱いた一人の男がいたその者の名は、進自分は何を信じ何の為に飛ぶのかこれは、同じ名を持つ二人の男がもう一度空を飛ぶための物語"
-image: "./hero.avif"
+excerpt: "西国と対立する東国のエリート戦闘集団「特務部隊」。隊長の真と、その背中を追う進。自分は何を信じ何の為に飛ぶのか。同じ名を持つ二人の男が、再び大空を舞うための物語。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "一般当日"
+    price: 1000
+  - label: "一般前売"
+    price: 800
+  - label: "学生当日"
+    price: 700
+  - label: "学生前売"
+    price: 500
 ---
 
 ## キャスト

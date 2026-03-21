@@ -1,11 +1,24 @@
 ---
-title: "呪いの館で、僕と握手！"
-date: "2009-10-09"
+name: "呪いの館で、僕と握手！"
+startDate: 2009-10-09
+endDate: 2009-10-11
+category: "2009年度秋公演"
+venue:
+  name: "LOXODONTA BLACK"
+  address: "大阪府大阪市阿倍野区阿倍野筋2-4-45"
 playwright: "Tact666cc"
 director: "Tact666cc"
-excerpt: "舞台はお化け屋敷、人はお化け(バイト)達。暗闇の中はサボり放題！
-この環境でやる気出るはずが…え？MVPにボーナス？俄然やる気の亡者共。呪いの沙汰も金次第。でも規則は守れ！お触り禁止だ！"
-image: "./hero.avif"
+excerpt: "舞台はお化け屋敷、人はお化け(バイト)達。暗闇の中はサボり放題！この環境でやる気出るはずが…え？MVPにボーナス？俄然やる気の亡者共。呪いの沙汰も金次第。でも規則は守れ！お触り禁止だ！"
+thumbnail: "./hero.avif"
+offers:
+  - label: "当日"
+    price: 1000
+  - label: "前売/Web"
+    price: 800
+  - label: "学生"
+    price: 600
+  - label: "小学生以下"
+    price: 0
 ---
 ## あらすじ
 

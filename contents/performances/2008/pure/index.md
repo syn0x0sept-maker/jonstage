@@ -1,10 +1,17 @@
 ---
-title: "pure summer"
-date: "2008-08-23"
-playwright: "ダンサー"
-director: "ダンサー"
-excerpt: "夏公演pure summer"
-image: "./hero.avif"
+name: "pure summer"
+startDate: 2008-08-23
+category: "2008年度夏公演"
+venue:
+  name: "関西大学高槻キャンパス 高岳館 大教室"
+  address: "大阪府高槻市霊仙寺町2-1-1"
+playwright: "万絵巻"
+director: "万絵巻"
+excerpt: "2008年度の夏公演「pure summer」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## 日時

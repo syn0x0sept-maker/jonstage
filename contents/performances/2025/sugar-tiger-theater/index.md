@@ -1,10 +1,28 @@
 ---
-title: "シュガーティガーティザー"
-date: "2025-10-18"
+name: "シュガーティガーティザー"
+startDate: 2025-10-18
+endDate: 2025-10-19
+category: "2025年度秋公演"
+venue:
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "コメット"
 director: "ヴィクセン"
-excerpt: "あんたは？これまでどんな人生、歩んできたの-"
-image: "./hero.avif"
+excerpt: "今一番住みたい街、アンビシティ。そこでは死者の想いを伝記映画にする『天人』たちがいた。自分の映画のヒットが来世の栄光に繋がると噂され、多くの人が集まるこの街で、一人の人生が問いかけられる。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "一般当日"
+    price: 1800
+  - label: "一般前売"
+    price: 1500
+  - label: "学生当日"
+    price: 1500
+  - label: "学生前売"
+    price: 1200
+  - label: "三人割(1人分)"
+    price: 1000
+  - label: "高校生以下"
+    price: 800
 ---
 ## あらすじ
 

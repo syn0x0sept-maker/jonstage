@@ -1,10 +1,24 @@
 ---
-title: "百鬼夜行絵巻”"
-date: "2010-03-13"
-playwright: "ささのは"
-director: "ささのは"
-excerpt: ""
-image: "./hero.avif"
+name: "百鬼夜行絵巻"
+startDate: 2010-01-08
+endDate: 2010-01-10
+category: "2009年度冬公演"
+venue:
+  name: "一心寺シアター倶楽"
+  address: "大阪府大阪市天王寺区逢阪2-6-13"
+playwright: "万絵巻"
+director: "万絵巻"
+excerpt: "2009年度の冬公演「百鬼夜行絵巻」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "当日"
+    price: 1200
+  - label: "前売"
+    price: 1000
+  - label: "学生"
+    price: 700
+  - label: "小学生以下"
+    price: 0
 ---
 
 ## 日時

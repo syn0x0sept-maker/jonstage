@@ -1,10 +1,17 @@
 ---
-title: "メルヘンな感じでルルっとストーリー"
-date: "2008-05-25"
+name: "メルヘンな感じでルルっとストーリー"
+startDate: 2008-08-25
+category: "2008年度公演"
+venue:
+  name: "関西大学高槻キャンパス TG101教室"
+  address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "守田達也とみんな"
 director: "John"
 excerpt: "ルルちゃんという女の子が登場します。ルルちゃんに降り掛かるたくさん。どーなっちゃうのルルちゃん。そして世界は。万絵巻Johnと仲間達がお届けするホカホカメルヘン世界救出コメディー参上！"
-image: "./hero.avif"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## 日時

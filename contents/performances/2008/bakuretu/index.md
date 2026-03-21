@@ -1,10 +1,24 @@
 ---
-title: "爆裂ガール！"
-date: "2008-12-12"
+name: "爆裂ガール！"
+startDate: 2008-12-12
+endDate: 2008-12-14
+category: "2008年度冬公演"
+venue:
+  name: "高槻市立総合市民交流センター 8Fイベントホール"
+  address: "大阪府高槻市紺屋町1-2"
 playwright: "万絵巻"
 director: "UNO"
 excerpt: "時は現代。風が舞い、雷鳴とどろく学園に奴はその名を響かせた。熱き血潮と義理人情。魂込めた右腕で、不当な悪をブン殴る。そう、彼女こそが世界最強の女子大生、天道京子！"
-image: "./hero.avif"
+thumbnail: "./hero.avif"
+offers:
+  - label: "当日"
+    price: 800
+  - label: "前売・Web・DM"
+    price: 600
+  - label: "学割"
+    price: 500
+  - label: "小学生以下"
+    price: 0
 ---
 
 ## 日時

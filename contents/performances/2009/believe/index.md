@@ -1,10 +1,18 @@
 ---
-title: "Believe"
-date: "2010-03-20"
+name: "Believe"
+startDate: 2010-03-20
+endDate: 2010-03-21
+category: "2009年度卒業公演"
+venue:
+  name: "茨木市立男女共生センターローズWAM ワムホール"
+  address: "大阪府茨木市元町4-7"
 playwright: "西田シャトナー"
 director: "梓"
 excerpt: "一五八二年、歴史が動き出す。天下をとるのは、信長か、光秀か、それとも…。"
-image: "./hero.avif"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## あらすじ

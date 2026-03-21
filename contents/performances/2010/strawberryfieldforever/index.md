@@ -1,10 +1,22 @@
 ---
-title: "Strawberry Field Forever"
-date: "2010-12-3"
+name: "Strawberry Field Forever"
+startDate: 2010-12-03
+endDate: 2010-12-05
+category: "2010年度冬公演"
+venue:
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "大西悠介"
 director: "大西悠介"
-excerpt: ""
-image: "./TOPT.avif"
+excerpt: "2010年度の冬公演「Strawberry Field Forever」の公演情報です。"
+thumbnail: "./TOPT.avif"
+offers:
+  - label: "当日"
+    price: 1000
+  - label: "前売"
+    price: 800
+  - label: "学生"
+    price: 600
 ---
 
 ## 日時

@@ -1,10 +1,22 @@
 ---
-title: "リバー"
-date: "2008-10-10"
+name: "リバー"
+startDate: 2008-10-10
+endDate: 2008-10-12
+category: "2008年度秋公演"
+venue:
+  name: "高槻市立総合市民交流センター 8Fイベントホール"
+  address: "大阪府高槻市紺屋町1-2"
 playwright: "田沢まさゆき"
 director: "田沢まさゆき"
-excerpt: "秋公演"
-image: "./hero.avif"
+excerpt: "2008年度の秋公演「リバー」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "当日"
+    price: 900
+  - label: "前売り"
+    price: 700
+  - label: "学割"
+    price: 500
 ---
 
 ## 日時

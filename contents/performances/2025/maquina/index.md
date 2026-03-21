@@ -1,10 +1,18 @@
 ---
-title: "Maquina"
-date: "2025-05-24"
+name: "Maquina"
+startDate: 2025-05-24
+endDate: 2025-05-25
+category: "2025年度新入生歓迎公演"
+venue:
+  name: "関西大学高槻キャンパス 体育館(G棟)G101教室"
+  address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "犀音、コメット"
 director: "犀音"
-excerpt: " "
-image: "./hero.avif"
+excerpt: "サービス代行業を営むナツキは、ある日謎の少女と出会う。彼女は自身の事どころか感情さえも忘れてしまっていた。「…..あなたは？」「俺はーー」全てをなくした少女は、彼らと出会い新たな人生を歩み出す。変わりゆく彼女が全てを思い出した時、何を選ぶのか。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料(カンパ制)"
+    price: 0
 ---
 ## あらすじ
 

@@ -1,10 +1,17 @@
 ---
-title: "血の創世記"
-date: "2011-2-20"
+name: "血の創世記"
+startDate: 2011-02-20
+category: "2010年度卒業公演"
+venue:
+  name: "茨木市立男女共生センターローズWAM ワムホール"
+  address: "大阪府茨木市元町4-7"
 playwright: "蓮行"
 director: "石橋彩華"
-excerpt: ""
-image: "./top.avif"
+excerpt: "2010年度の卒業公演「血の創世記」の公演情報です。"
+thumbnail: "./top.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## 日時

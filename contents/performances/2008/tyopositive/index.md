@@ -1,10 +1,17 @@
 ---
-title: "超ポジティブ小屋vs超ネガティブ小屋"
-date: "2008-05-25"
+name: "超ポジティブ小屋vs超ネガティブ小屋"
+startDate: 2008-08-25
+category: "2008年度公演"
+venue:
+  name: "関西大学高槻キャンパス 図書館横特設ステージ"
+  address: "大阪府高槻市霊仙寺町2-1-1"
 playwright: "爆笑はまっち"
 director: "爆笑はまっち"
 excerpt: "小さな小さなボロ小屋の中で行われる変わった二人組のショートコントの数々をお届けします。"
-image: "./hero.avif"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## 日時

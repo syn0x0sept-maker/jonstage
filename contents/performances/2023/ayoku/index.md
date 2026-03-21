@@ -1,10 +1,28 @@
 ---
-title: "鴉翼"
-date: "2023-12-16"
+name: "鴉翼"
+startDate: 2023-12-16
+endDate: 2023-12-17
+category: "2023年度冬公演"
+venue:
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "ジキル"
 director: "ジキル"
-excerpt: "その選択は誰が為に"
-image: "./hero.avif"
+excerpt: "維新から数年。平和の様相を見せる社会で、家畜が食い殺される異様な怪事件が相次ぐ。徐々に波風を立てていく事件の牙はやがて人間へ。その選択は誰が為に。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "一般当日"
+    price: 1800
+  - label: "一般前売"
+    price: 1500
+  - label: "学生当日"
+    price: 1500
+  - label: "学生前売"
+    price: 1200
+  - label: "三人割(1人分)"
+    price: 1000
+  - label: "高校生以下"
+    price: 800
 ---
 
 ## あらすじ

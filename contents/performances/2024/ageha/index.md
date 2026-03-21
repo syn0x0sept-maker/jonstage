@@ -1,10 +1,28 @@
 ---
-title: "精霊のAGEHA"
-date: "2024-12-06"
+name: "精霊のAGEHA"
+startDate: 2024-12-06
+endDate: 2024-12-08
+category: "2024年度冬公演"
+venue:
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "モンスターまさき"
 director: "モンスターまさき"
-excerpt: "ある地区に蔓延る白く不気味な集団・宗教法人精霊の社。弁護士であるユキナガは、宗教団体の闇を暴くため調査を開始する。しかし、そこで果たした思いもよらぬ出会いが、やがて運命の歯車を狂わせていく-"
-image: "./hero.avif"
+excerpt: "宗教法人「精霊の社」の闇を暴くため調査を開始した弁護士ユキナガ。しかし、そこで果たした思いもよらぬ出会いが、やがて運命の歯車を狂わせていく。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "一般当日"
+    price: 1800
+  - label: "一般前売"
+    price: 1500
+  - label: "学生当日"
+    price: 1500
+  - label: "学生前売"
+    price: 1200
+  - label: "三人割(1人分)"
+    price: 1000
+  - label: "高校生以下"
+    price: 800
 ---
 
 ## あらすじ

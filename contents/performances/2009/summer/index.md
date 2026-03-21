@@ -1,10 +1,17 @@
 ---
-title: "夏公演"
-date: "2009-08-22"
-image: "./hero.avif"
-playwright: "イトウエリ"
-director: "イトウエリ"
-excerpt: ""
+name: "2009年度夏公演"
+startDate: 2009-08-22
+category: "2009年度夏公演"
+venue:
+  name: "関西大学高槻キャンパス 高岳館"
+  address: "大阪府高槻市霊仙寺町2-1-1"
+playwright: "万絵巻"
+director: "万絵巻"
+excerpt: "チーム「三田名物 はまタン」、チーム「大西巨人軍」、チーム「第三使徒早紀エル」の3チームによるオムニバス形式の夏公演。各チームが趣向を凝らした作品を上演します。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## チーム 三田名物　はまタン

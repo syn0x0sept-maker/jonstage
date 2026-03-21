@@ -1,10 +1,28 @@
 ---
-title: "撃鉄の子守唄"
-date: "2019-12-13"
+name: "撃鉄の子守唄"
+startDate: 2019-12-13
+endDate: 2019-12-15
+category: "2019年度冬公演"
+venue:
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "劇団ショウダウン"
 director: "ばーぐ"
-excerpt: "ーー僕は…ただの臆病者なんだ。"
-image: "./hero.avif"
+excerpt: "1881年アメリカ、ニューメキシコ州。冒険家アーサー・コナン・ドイルは、伝説の黄金都市「エル・ドラド」を目指す。コナン・ドイル生涯最大にして、唯一語られなかった冒険が幕を開ける！"
+thumbnail: "./hero.avif"
+offers:
+  - label: "一般当日"
+    price: 1500
+  - label: "一般前売"
+    price: 1200
+  - label: "学生当日"
+    price: 1200
+  - label: "学生前売"
+    price: 1000
+  - label: "3人割(1人分)"
+    price: 800
+  - label: "高校生以下"
+    price: 500
 ---
 
 ## 公演概要

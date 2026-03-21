@@ -1,10 +1,28 @@
 ---
-title: "傀-KAI-"
-date: "2021-10-23"
+name: "傀-KAI-"
+startDate: 2021-10-23
+endDate: 2021-10-24
+category: "2021年度秋公演"
+venue:
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "白樺葵"
 director: "ジキル"
-excerpt: "戦争を終わらせるのは愛かそれとも力か"
-image: "./hero.avif"
+excerpt: "鬼の一族と、それを滅ぼそうとする人との戦乱の世。激化する戦争、交差する思い。争い合う二つの種族に生まれた生き様、憎しみ、そして愛。この戦争の終末にあるものとは一体何なのか。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "一般当日"
+    price: 1500
+  - label: "一般前売"
+    price: 1200
+  - label: "学生当日"
+    price: 1200
+  - label: "学生前売"
+    price: 1000
+  - label: "3人割り(1人分)"
+    price: 800
+  - label: "高校生以下"
+    price: 500
 ---
 
 ## 公演概要

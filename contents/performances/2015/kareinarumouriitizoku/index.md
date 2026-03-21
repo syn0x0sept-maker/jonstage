@@ -1,10 +1,17 @@
 ---
-title: "華麗なる毛利一族"
-date: "2015-8-17"
-playwright: ""
-director: ""
-excerpt: ""
-image: "./hero.avif"
+name: "華麗なる毛利一族"
+startDate: 2015-08-16
+category: "2015年度夏公演"
+venue:
+  name: "関西大学高槻キャンパス"
+  address: "大阪府高槻市霊仙寺町2-1-1"
+playwright: "万絵巻"
+director: "万絵巻"
+excerpt: "2015年度の夏公演「華麗なる毛利一族」の公演情報です。"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料"
+    price: 0
 ---
 
 ## メンバー一覧

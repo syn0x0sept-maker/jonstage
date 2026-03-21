@@ -1,10 +1,18 @@
 ---
-title: "cLock “I”"
-date: "2026-03-13"
-playwright: "ダンサー"
-director: "ダンサー"
+name: "cLock “I”"
+startDate: 2026-03-13
+endDate: 2026-03-14
+category: "2025年度卒業公演"
+venue:
+  name: "茨木市立男女共生センターローズWAM ワムホール"
+  address: "大阪府茨木市元町4-7"
+playwright: "万絵巻"
+director: "万絵巻"
 excerpt: "某国の中央街、ロンドシティ。色とりどりの夢が弾け、芸術も思想もひしめき合うこの街には、裏社会を牛耳るギャングたちが暗躍している。その頂点に立つのが、最強と名高い組織「アルカディア」。だがある日、街を震わせる急報が響き渡った。「——アルカディアのボス、ジニアが死んだ」、と。"
-image: "./hero.avif"
+thumbnail: "./hero.avif"
+offers:
+  - label: "無料(カンパ制)"
+    price: 0
 ---
 
 ## あらすじ

@@ -1,8 +1,8 @@
 ---
 name: "あやかし"
-startDate: 2020-12-05
+startDate: 2020-12-04
 endDate: 2020-12-06
-category: "2020年度冬公演"
+category: "2020年度卒業公演"
 venue:
   name: "YouTubeLive (オンライン配信)"
 playwright: "ノンベジ・JK・花夏流"
@@ -10,7 +10,7 @@ director: "マッシュ"
 excerpt: "『あやかし』はかつて『あや師』だった。忙しい親の代わりに子供をあやす仕事が、なぜ恐れられる存在へと変わってしまったのか。和から外れてしまった者共の過去を描く、万絵巻の意欲作。"
 thumbnail: "./hero.avif"
 offers:
-  - label: "無料(カンパ制)"
+  - label: "無料"
     price: 0
 ---
 

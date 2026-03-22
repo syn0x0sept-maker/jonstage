@@ -2,14 +2,16 @@
 name: "撃鉄の子守唄"
 startDate: 2019-12-13
 endDate: 2019-12-15
-category: "2019年度冬公演"
+category: "2019年度卒業公演"
 venue:
   name: "大阪市立芸術創造館"
   address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "劇団ショウダウン"
 director: "ばーぐ"
 excerpt: "1881年アメリカ、ニューメキシコ州。冒険家アーサー・コナン・ドイルは、伝説の黄金都市「エル・ドラド」を目指す。コナン・ドイル生涯最大にして、唯一語られなかった冒険が幕を開ける！"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./poster-front.avif"
+  back: "./poster-back.avif"
 offers:
   - label: "一般当日"
     price: 1500
@@ -98,7 +100,7 @@ Osaka Metro谷町線「千林大宮」駅下車
 ※学生の方は当日学生証をお持ちください。
 
 
-##　キャスト
+## キャスト
 
 カルピス
 

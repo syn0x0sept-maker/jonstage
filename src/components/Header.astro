@@ -23,6 +23,9 @@ const path = Astro.url.pathname;
                        href="/diary/">劇団員日記</a>
                 </li>
                 <li class="globalmenu-item">
+                    <a class="globalmenu-link g-1" href="/welcome/">新入生歓迎特集<i class="aif-new_window"/></a>
+                </li>
+                <li class="globalmenu-item">
                     <a class:list={["globalmenu-link", {active: path.startsWith("/contact/")}]}
                        href="/contact/">お問い合わせ</a>
                 </li>
@@ -58,6 +61,7 @@ const path = Astro.url.pathname;
             <li class="mobilemenu-item"><a class="mobilemenu-link" href="/performances/">公演</a></li>
             <li class="mobilemenu-item"><a class="mobilemenu-link" href="/blog/">ブログ</a></li>
             <li class="mobilemenu-item"><a class="mobilemenu-link" href="/diary/">劇団員日記</a></li>
+            <li class="mobilemenu-item"><a class="mobilemenu-link" href="/welcome/">新入生歓迎特集</a></li>
             <li class="mobilemenu-item"><a class="mobilemenu-link" href="/contact/">お問い合わせ</a></li>
         </ul>
         <hr class="divider my-4">

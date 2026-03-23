@@ -3,15 +3,23 @@ name: "ラジオドッグ"
 startDate: 2017-10-06
 category: "2017年度秋公演"
 venue:
-  name: "OVAL THEATER"
-  address: "大阪府大阪市阿倍野区阿倍野筋2-4-45"
+  name: "大阪市立芸術創造館"
+  address: "大阪府大阪市旭区中宮1-11-14"
 playwright: "オカモト國ヒコ"
 director: "ジャンヌ"
 excerpt: "2017年度の秋公演「ラジオドッグ」の公演情報です。僕らの最後の冒険が始まる。"
-thumbnail: "./hero.avif"
+flyer:
+  front: "./poster-front.avif"
+  back: "./poster-back.avif"
 offers:
-  - label: "無料"
-    price: 0
+  - label: "一般当日"
+    price: 1000
+  - label: "一般前売"
+    price: 800
+  - label: "学生当日"
+    price: 700
+  - label: "学生前売"
+    price: 500
 ---
 
 ## 日時
@@ -20,8 +28,21 @@ offers:
 
 ## 場所
 
-OVAL THEATER
+大阪市立芸術創造館
 
 ## 料金
 
-無料
+- 学生前売：500円
+- 一般前売：800円
+- 学生当日：700円
+- 一般当日：1000円
+
+※学生の方は当日学生証をお持ちください。
+
+## キャストから一言
+
+｢五本の指に入るくらいに好きな公演｣(ジョージ)
+
+｢ストーリー,演出,音響,照明全てが最高！1番好きな作品！｣(F1)
+
+｢全米が泣いた。忘れられない日になる！｣(ノンベジ･JK･花夏流)

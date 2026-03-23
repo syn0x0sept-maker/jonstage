@@ -48,9 +48,20 @@ const breadcrumbs = [
             </ol>
             <h1 class="h1">公演</h1>
         </section>
+        <nav class="year-nav">
+            <div class="year-nav__inner">
+                <ul class="year-nav__list" id="year-nav-list">
+                    {years.map((year: number) => (
+                        <li class="year-nav__item">
+                            <a class="year-nav__link" href={`#${year}`} data-year={year}>{year}</a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </nav>
         {years.map((year: number) => (
-                <section class="container-md mt-6">
-                    <h2 id={year.toString()} class="h2">{year}年</h2>
+                <section class="container-md mt-6 year-section" id={year.toString()}>
+                    <h2 class="h2">{year}年</h2>
                     <div class="mt-5 vstack g-5">
                         {performancesByYear[year].map((performance: CollectionEntry<'performances'>) => (
                                 <article class="custom-card">
@@ -101,7 +112,94 @@ const breadcrumbs = [
     </main>
 </Layout>
 
+<script>
+  const sections = document.querySelectorAll<HTMLElement>('.year-section');
+  const links = document.querySelectorAll<HTMLAnchorElement>('.year-nav__link');
+
+  const setActive = (id: string) => {
+    links.forEach(link => {
+      link.classList.toggle('is-active', link.dataset.year === id);
+    });
+    const activeLink = document.querySelector<HTMLAnchorElement>(`.year-nav__link[data-year="${id}"]`);
+    activeLink?.scrollIntoView({block: 'nearest', inline: 'center'});
+  };
+
+  const observer = new IntersectionObserver(
+    entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+          break;
+        }
+      }
+    },
+    {rootMargin: '-10% 0px -80% 0px', threshold: 0}
+  );
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
 <style lang="scss">
+  .year-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid #e0e0e0;
+    margin-top: 2rem;
+
+    &__inner {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar { display: none; }
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: .375rem;
+      list-style: none;
+      margin: 0;
+      padding: .625rem 1rem;
+      width: max-content;
+      min-width: 100%;
+    }
+
+    &__link {
+      display: block;
+      padding: .3rem .9rem;
+      border: 1.5px solid #c0c0c0;
+      border-radius: 2rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-decoration: none;
+      color: #555;
+      white-space: nowrap;
+      transition: background .18s, color .18s, border-color .18s, transform .1s;
+
+      &:hover {
+        background: #111;
+        color: #fff;
+        border-color: #111;
+        transform: translateY(-1px);
+      }
+
+      &.is-active {
+        background: #111;
+        color: #fff;
+        border-color: #111;
+      }
+    }
+  }
+
+  .year-section {
+    scroll-margin-top: 3rem;
+  }
+
   .custom-card {
     border: 1px solid #949494;
     display: grid;

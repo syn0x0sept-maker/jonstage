@@ -31,5 +31,5 @@ offers:
 
 ![CAST](./cast.avif)
 
-![CAST](./con.avif)
+![CAST](./contact.avif)
 

@@ -17,6 +17,8 @@ offers:
     price: 700
   - label: "学割"
     price: 500
+flyer:
+  front: "./kippu.avif"
 ---
 
 ## 日時

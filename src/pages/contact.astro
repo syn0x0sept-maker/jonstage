@@ -9,7 +9,7 @@ const breadcrumbs = [
     <main class="container-lg">
         <section class="text-center mt-5 mb-5">
             <h1 class="h1">お問い合わせ</h1>
-            <p>ぜひご連絡ください</p>
+            <p>ご質問、ご相談など、お気軽にお問い合わせください</p>
         </section>
 
         <div class="contact-container">
@@ -22,8 +22,12 @@ const breadcrumbs = [
                 <div class="info-card">
                     <h2>SNS</h2>
                     <div class="social-links">
-                        <a href="https://x.com/Yoroduwemaki" class="social-link">Twitter</a>
+                        <a href="https://x.com/Yoroduwemaki" class="social-link">X(旧Twitter)</a>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/yoroduwemaki" class="social-link">Instagram</a>
                     </div>
+                    </div>
+                    
                 </div>
             </section>
         </div>
@@ -50,9 +54,14 @@ const breadcrumbs = [
             <div class="faq-item">
                 <h3>活動時間はいつですか？</h3>
                 <p>
-                    平日は5時間目の終了する18時から20時半ごろまで稽古することが多いです。土日祝日は基本的に休みですが、公演本番直前になると稽古メニュー次第では午前～昼、あるいは昼～夕方に稽古をすることもあります。
-                </p>
+                    平日は5時間目の終了する18時から20時半ごろまで稽古することが多いです。土日祝日は基本的に休みですが、公演本番直前になると稽古頻度が増える場合もあります。自分の予定に合わせた活動が可能です。                </p>
             </div>
+
+                        <div class="faq-item">
+                <h3>他の活動と両立できますか？</h3>
+                <p>万絵巻は兼部可能なサークルです。自身の予定に合わせた活動も可能なため、他の団体に所属しながら活躍している団員も多くいます。</p>
+            </div>
+
 
             <div class="faq-item">
                 <h3>
@@ -68,13 +77,13 @@ const breadcrumbs = [
                     スタッフに興味があるのですが、スタッフのみの参加はいいですか？
                 </h3>
                 <p>
-                    ＯＫです！「演劇に興味はあるけど舞台に立つのはちょっと……」というひとも、音響照明などのスタッフで公演に強く関わることができます。演劇は役者の身体表現だけではありません。
+                    ＯＫです！実際、スタッフのみ参加している現役生もいます。「演劇に興味はあるけど舞台に立つのはちょっと……」というひとも、音響照明などのスタッフで公演に強く関わることができます。
                 </p>
             </div>
 
             <div class="faq-item">
                 <h3>万絵巻には現在何人くらい所属していますか？</h3>
-                <p>現在30名弱のメンバーが所属しています。</p>
+                <p>現在40名弱のメンバーが所属しています。和気あいあいとした雰囲気で、みんなで協力しながら活動しています。</p>
             </div>
         </section>
     </main>
@@ -106,12 +115,13 @@ const breadcrumbs = [
     }
 
     .social-link {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: #1a1a1a;
-        color: white;
+        display: flex;
+        padding: 0.7rem;
+        border-radius: 8px;
+        background-color: none;
+        color: black;
         text-decoration: none;
-        border-radius: 4px;
+        border: solid 2px #333;
         font-size: 0.875rem;
         transition: background-color 0.3s ease;
     }

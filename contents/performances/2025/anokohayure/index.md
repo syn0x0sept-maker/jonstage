@@ -11,7 +11,7 @@ director: "もぎ"
 excerpt: "新しい学校、新しい世界。生まれ変わるような気持ちでいたけれど、現実はなかなかうまくいかない。そんな私の前に現れたのは…「実は私、幽霊なんだ！」"
 flyer:
   front: "./poster-front.avif"
-  back: "./poster-back.avif"
+  back: "./anokohayuurei.avif"
 thumbnail: "./anokoha.avif"
 offers:
   - label: "無料"
@@ -63,3 +63,5 @@ offers:
 - 衣装：慧流
 - 広報：ヴィクセン
 - 制作：カメX.P.C
+
+![すげたの](./poster-back.avif)

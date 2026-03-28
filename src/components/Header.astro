@@ -2,20 +2,14 @@
 import Logo from "../assets/logo.svg";
 const path = Astro.url.pathname;
 ---
-<style>
-    .header-logo {
-        text-align: left;
-    }
-</style>
 
 <header class="header">
     <nav class="header-full">
         <a class="header-logo h3 g-2" href="/">
             <Logo width={40} height={40}/>
             劇団万絵巻
-            
         </a>
-        <a class="header-logo h4" href="/welcome/">〈新団員募集中〉</a>
+        <a class="header-news h5" href="/welcome/">〈新団員募集中〉</a>
         <div class="header-menu">
             <ul class="globalmenu">
                 <li class="globalmenu-item">
@@ -23,7 +17,8 @@ const path = Astro.url.pathname;
                        href="/performances/">公演</a>
                 </li>
                 <li class="globalmenu-item">
-                    <a class:list={["globalmenu-link", {active: path.startsWith("/feature/")}]} href="/feature/">特集</a>
+                    <a class:list={["globalmenu-link", {active: path.startsWith("/feature/")}]}
+                       href="/feature/">特集</a>
                 </li>
                 <li class="globalmenu-item">
                     <a class:list={["globalmenu-link", {active: path.startsWith("/diary/")}]}
@@ -81,3 +76,12 @@ const path = Astro.url.pathname;
     </div>
     <div class="drawer-footer"></div>
 </dialog>
+
+<style lang="scss">
+  .header-news {
+    margin: 0 auto;
+    order: 2;
+    display: flex;
+    align-items: center;
+  }
+</style>

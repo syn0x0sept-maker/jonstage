@@ -3,5 +3,55 @@ import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="2026年度新入生歓迎特集">
-    <h1>2026年度新入生歓迎特集</h1>
+    <main>
+        <section class="welcome-hero">
+            <video class="welcome-video" autoplay loop muted playsinline>
+                <source src="/welcome/welcome.mp4" type="video/mp4"/>
+            </video>
+            <h1 class="hero-text">舞台でしか<br/>出会えない顔がある</h1>
+        </section>
+        <section class="container-lg my-6">
+            <h2 class="h2">私たちについて</h2>
+            <p class="mt-3">年間5～6回の公演を中心に各イベントごとのパーティやキャンプ、スキー旅行など、学内学外問わずあらゆる活動を心ゆくまで満喫している演劇サークルです。 人数は例年40人ほど。この高槻キャンパス内では比較的大きく、サークル内の結束も強く生まれる人数です。毎年、学内の施設を借りたり学外では大阪府内の小劇場やホールを借りて演劇を上演しています。また人によってはサークル以外の大きな劇団の公演に参加する人も。関西大学統一学園祭では関西大学にある4つの演劇サークル・演劇部でユニットを組みお芝居をするなど、高槻キャンパスを超えた活動をしています。みんなで考えながら協力し合って一つのお芝居を作ることに全力を注いでいます! 芝居する時は徹底的に芝居する、遊ぶときは徹底的に遊ぶ。高槻キャンパスでこれほど活発に活動している団体は他にいないのではないでしょうか?</p>
+            <div class="banner banner-info mt-5">
+                <i class="banner-icon aif-information"></i>
+                <span class="banner-title">新入生の方へ</span>
+                <div class="banner-body">
+                    <time class="banner-date">2026年3月28日</time>
+                    <span class="banner-description">2026年度新入生向けの情報はまもなく公開されます。今しばらくお待ちください。</span>
+                </div>
+            </div>
+        </section>
+    </main>
 </Layout>
+
+<style lang="scss">
+  .welcome-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    font-size: 2.8rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .welcome-video {
+    display: block;
+    width: 100%;
+    height: calc(100dvh - 69px);
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 768px) {
+    .welcome-video {
+      height: calc(100dvh - 136px);
+    }
+  }
+</style>

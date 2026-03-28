@@ -2,7 +2,7 @@
 name: "一握の石"
 startDate: 2026-04-16
 endDate: 2026-04-16
-category: "2025年度新人歓迎公演"
+category: "2026年度新人歓迎公演"
 venue:
   name: "高槻キャンパスC棟1階スタジオ"
   address: "大阪府高槻市霊仙寺町2丁目1-1"

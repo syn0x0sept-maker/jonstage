@@ -31,6 +31,7 @@ import Layout from "../../layouts/Layout.astro";
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
   }
 
   .hero-text {
@@ -47,6 +48,7 @@ import Layout from "../../layouts/Layout.astro";
     width: 100%;
     height: calc(100dvh - 69px);
     object-fit: cover;
+    pointer-events: none;
   }
 
   @media screen and (min-width: 768px) {

@@ -66,3 +66,6 @@ offers:
 - 広報：喫茶アムル
 - 制作：ぴーちぇ
 - 振付：ハリー
+
+## 予約フォーム
+[関西大学劇団万絵巻2026年度新入生歓迎公演「一握の石」予約フォーム](https://docs.google.com/forms/d/e/1FAIpQLSds-B3OJFpiTAg4ebdhp9-7d4O4x8skF8ZrFUpiUM6oZw0YCA/viewform?usp=publish-editor)

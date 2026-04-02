@@ -1,5 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import {Image} from "astro:assets";
+import seisaku from '../../assets/welcome/seisaku_top.avif';
+import kouhou from '../../assets/welcome/kouhou_top.avif';
+import ishoumeik from '../../assets/welcome/ishoumeik_top.avif';
+import kodougu from '../../assets/welcome/kodougu_top.avif';
+import oodougu from '../../assets/welcome/oodougu_top.avif';
+import shoumei from '../../assets/welcome/shoumei_top.avif';
+import onkyou from '../../assets/welcome/onkyou_top.avif';
+import butaikantoku from '../../assets/welcome/butaikantoku_top.avif';
+import enshutu from '../../assets/welcome/enshutu_top.avif';
 ---
 
 <Layout title="2026年度新入生歓迎特集">
@@ -12,13 +22,117 @@ import Layout from "../../layouts/Layout.astro";
         </section>
         <section class="container-lg my-6">
             <h2 class="h2">私たちについて</h2>
-            <p class="mt-3">年間5～6回の公演を中心に各イベントごとのパーティやキャンプ、スキー旅行など、学内学外問わずあらゆる活動を心ゆくまで満喫している演劇サークルです。 人数は例年40人ほど。この高槻キャンパス内では比較的大きく、サークル内の結束も強く生まれる人数です。毎年、学内の施設を借りたり学外では大阪府内の小劇場やホールを借りて演劇を上演しています。また人によってはサークル以外の大きな劇団の公演に参加する人も。関西大学統一学園祭では関西大学にある4つの演劇サークル・演劇部でユニットを組みお芝居をするなど、高槻キャンパスを超えた活動をしています。みんなで考えながら協力し合って一つのお芝居を作ることに全力を注いでいます! 芝居する時は徹底的に芝居する、遊ぶときは徹底的に遊ぶ。高槻キャンパスでこれほど活発に活動している団体は他にいないのではないでしょうか?</p>
-            <div class="banner banner-info mt-5">
-                <i class="banner-icon aif-information"></i>
-                <span class="banner-title">新入生の方へ</span>
-                <div class="banner-body">
-                    <time class="banner-date">2026年3月28日</time>
-                    <span class="banner-description">2026年度新入生向けの情報はまもなく公開されます。今しばらくお待ちください。</span>
+            <p class="mt-3">年間5～6回の公演を中心に各イベントごとのパーティやキャンプ、スキー旅行など、学内学外問わずあらゆる活動を心ゆくまで満喫している演劇サークルです。
+                人数は例年40人ほど。この高槻キャンパス内では比較的大きく、サークル内の結束も強く生まれる人数です。毎年、学内の施設を借りたり学外では大阪府内の小劇場やホールを借りて演劇を上演しています。また人によってはサークル以外の大きな劇団の公演に参加する人も。関西大学統一学園祭では関西大学にある4つの演劇サークル・演劇部でユニットを組みお芝居をするなど、高槻キャンパスを超えた活動をしています。みんなで考えながら協力し合って一つのお芝居を作ることに全力を注いでいます!
+                芝居する時は徹底的に芝居する、遊ぶときは徹底的に遊ぶ。高槻キャンパスでこれほど活発に活動している団体は他にいないのではないでしょうか?</p>
+        </section>
+        <section class="container-lg my-6">
+            <ul class="">
+                <li><a class="link" href="#役職紹介">役職紹介</a></li>
+            </ul>
+        </section>
+        <section class="container-lg my-6">
+            <h2 class="h2" id="役職紹介">役職紹介</h2>
+            <div class="vstack g-5">
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>制作</h3>
+                        <p>公演の根底を支える事務的存在</p>
+                        <p>
+                            広報と連携してどの媒体にどの情報を載せ宣伝するか考えたり、本番の受付や案内係などのスタッフ業務を行う役職であり、公演中だけではなく、公演前後のたくさんのお仕事も担う役割を持つ！</p>
+                        <p>裏方として誰かをサポートしたい方に向いております！</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={seisaku} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>広報</h3>
+                        <p>宣伝のためのチラシやパンフレットなどを作る役職！</p>
+                        <p>
+                            個人での作業が多く、自分のペースで楽しめます。コンピュータースキルを上げたい人や、写真･デザイン･イラストが好きな人にオススメ！</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={kouhou} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>衣装</h3>
+                        <p>
+                            衣装のイメージを演出と共有し、衣装作りやコーディネート、本番当日は舞台メイクやヘアセットをして役者が舞台で輝けるよう手助けします！</p>
+                        <p>コーディネートや裁縫が好きな人はもちろん
+                            メイクしたことない、センスに自信がないという人でも大丈夫！男性も大歓迎です‼︎</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={ishoumeik} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>小道具</h3>
+                        <p>～役者の使う道具を作る職人～</p>
+                        <p>役者が劇中で使う道具を用意する役職！</p>
+                        <p>
+                            銃火器などの武器を作ることも。強度や耐久性、使いやすさを考え、装飾にもこだわりをもち、丁寧に仕上げていく様はまさに職人！器用な人や細かい作業が好きな人にオススメ！</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={kodougu} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>大道具</h3>
+                        <p>舞台のことならなんでもお任せください！</p>
+                        <p>大道具に入ればみんな大工さんに！</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={oodougu} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>照明</h3>
+                        <p>舞台の明かりを作る役職！</p>
+                        <p>
+                            明かりによって舞台の雰囲気が変わったり、役者のモチベーションも上がって演技に深みが出たりするので、お芝居を作る上でとっても重要。専門の用語が多く、かっこいいところも魅力！</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={shoumei} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>音響</h3>
+                        <p>シーンに合ったBGMや効果音(SE)を探す，その名のとおり『音で舞台を彩る役職』です。</p>
+                        <p>
+                            実際に本番で音を鳴らす人員もいます。舞台に立つのは自信ないけど本番に関わりたい気持ちはある方是非</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={onkyou} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>舞台監督</h3>
+                        <p>ー全体を統括する現場の最高責任者ー</p>
+                        <p>
+                            主な仕事はスケジュール管理などのスタッフの統括！舞台監督には全体を観察する力や、状況を冷静に判断する力が必要不可欠。非常に責任のある役職ですが、公演後には大きな充実感と達成感を味わえます！！</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={butaikantoku} alt=""/>
+                    </div>
+                </div>
+                <div class="grid g-3">
+                    <div class="content col-12 col-md-6">
+                        <h3>演出</h3>
+                        <p>
+                            舞台の全てを司るといっても過言ではない演出。全ての役職と連携を取りながら舞台を創りあげていきます。責任重大で大変な仕事ですが自分にとって大きな経験値になること間違いなしです。</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <Image class="img-fluid" src={enshutu} alt=""/>
+                    </div>
                 </div>
             </div>
         </section>

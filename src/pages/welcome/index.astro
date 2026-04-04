@@ -17,7 +17,10 @@ import uragawa from '../../assets/welcome/uragawa.avif';
     <main>
         <section class="welcome-hero">
             <video class="welcome-video" autoplay loop muted playsinline>
-                <source src="/welcome/welcome.webm" type="video/webm"/>
+                <!-- Chrome / Firefox / Edge: WebM(AV1) -->
+                <source src="/welcome/welcome.webm" type="video/webm; codecs=av01"/>
+                <!-- Safari: MP4(H.264) -->
+                <source src="/welcome/welcome.mp4" type="video/mp4"/>
             </video>
             <h1 class="hero-text">舞台でしか<br/>出会えない顔がある</h1>
         </section>

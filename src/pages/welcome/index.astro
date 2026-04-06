@@ -11,6 +11,7 @@ import onkyou from '../../assets/welcome/onkyou_top.avif';
 import butaikantoku from '../../assets/welcome/butaikantoku_top.avif';
 import enshutu from '../../assets/welcome/enshutu_top.avif';
 import uragawa from '../../assets/welcome/uragawa.avif';
+import mapS from '../../assets/welcome/map_s.avif';
 ---
 
 <Layout title="2026年度新入生歓迎特集">
@@ -32,9 +33,62 @@ import uragawa from '../../assets/welcome/uragawa.avif';
         </section>
         <section class="container-lg mt-5 mb-6">
             <ul class="d-flex g-3 flex-wrap">
+                <li><a class="link" href="#役職体験会">役職体験会</a></li>
                 <li><a class="link" href="#万の人から聞いたウラガワ">万の人から聞いたウラガワ</a></li>
                 <li><a class="link" href="#役職紹介">役職紹介</a></li>
             </ul>
+        </section>
+        <section class="container-lg my-6">
+            <h2 class="h2 mb-4" id="役職体験会">役職体験会</h2>
+            <p class="mb-3 mt-3">演劇は役者だけじゃない。大道具・音響・広報…他にもたくさんの役職が公演を支えています。 そんなスタッフをちょっとのぞいてみませんか？</p>
+            <ol class="taiken-list">
+                <li class="taiken-item">
+                    <strong class="taiken-role">大道具</strong>
+                    <div class="taiken-schedule">
+                        <time class="taiken-date" datetime="2026-04-20">4月20日</time>
+                        <span class="badge badge-filled-outline">昼休み</span>
+                    </div>
+                </li>
+                <li class="taiken-item">
+                    <strong class="taiken-role">小道具</strong>
+                    <div class="taiken-schedule">
+                        <time class="taiken-date" datetime="2026-04-21">4月21日</time>
+                        <span class="badge badge-filled-outline">昼休み</span>
+                    </div>
+                </li>
+                <li class="taiken-item">
+                    <strong class="taiken-role">音響</strong>
+                    <div class="taiken-schedule">
+                        <time class="taiken-date" datetime="2026-04-22">4月22日</time>
+                        <span class="badge badge-filled-outline">昼休み</span>
+                    </div>
+                </li>
+                <li class="taiken-item">
+                    <strong class="taiken-role">照明</strong>
+                    <div class="taiken-schedule">
+                        <time class="taiken-date" datetime="2026-04-23">4月23日</time>
+                        <span class="badge badge-filled-outline">昼休み</span>
+                    </div>
+                </li>
+                <li class="taiken-item">
+                    <strong class="taiken-role">広報</strong>
+                    <div class="taiken-schedule">
+                        <time class="taiken-date" datetime="2026-04-24">4月24日</time>
+                        <span class="badge badge-filled-outline">昼休み</span>
+                    </div>
+                </li>
+                <li class="taiken-item">
+                    <strong class="taiken-role">衣装</strong>
+                    <div class="taiken-schedule">
+                        <time class="taiken-date" datetime="2026-04-27">4月27日</time>
+                        <span class="badge badge-filled-outline">昼休み</span>
+                    </div>
+                </li>
+            </ol>
+            <figure class="taiken-map">
+                <figcaption class="fs-24">開催場所：S棟</figcaption>
+                <Image class="img-fluid" src={mapS} alt="役職体験会の開催場所 S棟の地図"/>
+            </figure>
         </section>
         <section class="container-lg my-6">
             <h2 class="h2 mb-3" id="万の人から聞いたウラガワ">万の人から聞いたウラガワ</h2>
@@ -177,6 +231,77 @@ import uragawa from '../../assets/welcome/uragawa.avif';
   @media screen and (min-width: 768px) {
     .welcome-video {
       height: calc(100dvh - 136px);
+    }
+  }
+
+  .taiken-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+
+    @media screen and (min-width: 576px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .taiken-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 3px solid currentColor;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  .taiken-role {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .taiken-schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.2rem;
+  }
+
+  .taiken-date {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .taiken-time {
+    font-size: 0.8rem;
+    color: #666;
+    background-color: #f3f3f3;
+    padding: 0.1rem 0.5rem;
+    border-radius: 3px;
+    align-self: flex-start;
+  }
+
+  .taiken-map {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    img {
+      border-radius: 6px;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    figcaption {
     }
   }
 </style>

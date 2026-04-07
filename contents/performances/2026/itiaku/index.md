@@ -10,6 +10,9 @@ playwright: "ガラキー"
 director: "ガラキー"
 excerpt: "合理が、偶然に堕ちる。"
 thumbnail: "./itiaku.avif"
+flyer:
+  front: "./itiaku.avif"
+  back: "./okibira.avif"
 offers:
   - label: "無料"
     price: 0

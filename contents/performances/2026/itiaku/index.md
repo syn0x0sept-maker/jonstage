@@ -2,7 +2,7 @@
 name: "一握の石"
 startDate: 2026-04-16
 endDate: 2026-04-17
-category: "2026年度新人歓迎公演"
+category: "2026年度新入生歓迎公演"
 venue:
   name: "高槻キャンパスC棟1階スタジオ"
   address: "大阪府高槻市霊仙寺町2丁目1-1"
@@ -11,7 +11,7 @@ director: "ガラキー"
 excerpt: "合理が、偶然に堕ちる。"
 thumbnail: "./itiaku.avif"
 flyer:
-  front: "./itiaku.avif"
+  front: "./poster.avif"
   back: "./okibira.avif"
 offers:
   - label: "無料"
@@ -34,7 +34,7 @@ offers:
 
 2026年4月
 
-16日(木) 
+16日(木)
 
 公開リハーサル 17:00～
 
@@ -60,9 +60,9 @@ offers:
 ## スタッフ
 
 - 舞台監督：のぼーる３号
-- 演出補佐：ポイズンマスター、もぶ、ダンサー 
+- 演出補佐：ポイズンマスター、もぶ、ダンサー
 - 大道具：エミル
-- 小道具：しらたま 
+- 小道具：しらたま
 - 照明：優鷹タン
 - 音響：S.Bage
 - 衣装：うぃすぱー
@@ -71,4 +71,5 @@ offers:
 - 振付：ハリー
 
 ## 予約フォーム
+
 [関西大学劇団万絵巻2026年度新入生歓迎公演「一握の石」予約フォーム](https://docs.google.com/forms/d/e/1FAIpQLSds-B3OJFpiTAg4ebdhp9-7d4O4x8skF8ZrFUpiUM6oZw0YCA/viewform?usp=publish-editor)

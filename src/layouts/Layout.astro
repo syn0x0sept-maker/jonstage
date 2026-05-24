@@ -37,10 +37,22 @@ const {title, description, image, type, schemaType = 'TheaterGroup', schemaData 
 <slot/>
 <Footer/>
 {import.meta.env.PROD && (
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9dc90fbb1b4947a1aa7d6e2bf2cedd9a"}'></script>
-    <script async defer src="https://analytics.ctpena.net/tracker.js" data-website-id="cmouix3lz0001xfwvhulnhwu8"></script>
-    <!-- End Cloudflare Web Analytics -->
+    <!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ctpena.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
 )}
 </body>
 </html>

@@ -48,12 +48,12 @@ const breadcrumbs = [
             </ol>
             <h1 class="h1">公演</h1>
         </section>
-        <nav class="year-nav">
+        <nav class="year-nav container-md">
             <div class="year-nav__inner">
                 <ul class="year-nav__list" id="year-nav-list">
                     {years.map((year: number) => (
                         <li class="year-nav__item">
-                            <a class="year-nav__link" href={`#${year}`} data-year={year}>{year}</a>
+                            <a class="badge badge-outline" href={`#${year}`} data-year={year}>{year}</a>
                         </li>
                     ))}
                 </ul>
@@ -114,11 +114,11 @@ const breadcrumbs = [
 
 <script>
   const sections = document.querySelectorAll<HTMLElement>('.year-section');
-  const links = document.querySelectorAll<HTMLAnchorElement>('.year-nav__link');
+  const links = document.querySelectorAll<HTMLAnchorElement>('.badge.badge-outline');
 
   const setActive = (id: string) => {
     links.forEach(link => {
-      link.classList.toggle('is-active', link.dataset.year === id);
+      link.classList.toggle('badge-fill', link.dataset.year === id);
     });
     const activeLink = document.querySelector<HTMLAnchorElement>(`.year-nav__link[data-year="${id}"]`);
     activeLink?.scrollIntoView({block: 'nearest', inline: 'center'});
@@ -152,15 +152,12 @@ const breadcrumbs = [
 
     &__inner {
       overflow-x: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      &::-webkit-scrollbar { display: none; }
     }
 
     &__list {
       display: flex;
       flex-wrap: nowrap;
-      gap: .375rem;
+      gap: .5rem;
       list-style: none;
       margin: 0;
       padding: .625rem 1rem;
@@ -197,7 +194,7 @@ const breadcrumbs = [
   }
 
   .year-section {
-    scroll-margin-top: 3rem;
+    scroll-margin-top: 6rem;
   }
 
   .custom-card {

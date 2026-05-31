@@ -9,9 +9,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     site: 'https://yoroweb.com',
     trailingSlash: 'always',
-    adapter: cloudflare({
-        imageService: 'passthrough',
-    }),
     integrations: [sitemap()]
 });
 //todo 2008夏公演ブログの内容あり3チーム分

@@ -10,7 +10,7 @@ export default defineConfig({
     site: 'https://yoroweb.com',
     trailingSlash: 'always',
     adapter: cloudflare({
-        imageService: 'passthrough'
+        imageService: 'cloudflare-binding',
     }),
     integrations: [sitemap()]
 });

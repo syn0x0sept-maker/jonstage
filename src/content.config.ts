@@ -39,4 +39,27 @@ const diary = defineCollection({
     }),
 });
 
-export const collections = {performances, diary};
+const summer_teams = defineCollection({
+    loader: glob({pattern: '**/index.md', base: './contents/summer_teams'}),
+    schema: ({image}) => z.object({
+        teamName: z.string(),
+        director: z.string(),
+        year: z.coerce.number(),
+        twitter: z.string(),
+        instagram: z.string(),
+        thumbnail: image(),
+    }),
+});
+
+const summer_diary = defineCollection({
+    loader: glob({pattern: '**/index.md', base: './contents/summer_diary'}),
+    schema: z.object({
+        title: z.string(),
+        date: z.coerce.date(),
+        teamName: z.string().optional(),
+    }),
+});
+
+export const collections = {performances, diary, summer_teams, summer_diary};
+
+//.optionalで任意

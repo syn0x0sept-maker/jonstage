@@ -70,8 +70,7 @@ const breadcrumbs = [
         <article>
             <header class="container-md mt-5">
                 <ol class="breadcrumb mb-2">
-                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">ホーム</a></li>
-                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="/summer/">公演</a></li>
+                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="/summer/">夏チーム</a></li>
                     <li class="breadcrumb-item">{summer_team.data.teamName}</li>
                 </ol>
                 <h1 class="h1 mb-2">{summer_team.data.teamName}</h1>
@@ -82,29 +81,21 @@ const breadcrumbs = [
                     <dt class="mr-2">演出:</dt>
                     <dd class="">{summer_team.data.director}</dd>
                 </dl>
+                <a class="link fw-bold" href={`https://www.instagram.com/${summer_team.data.instagram}/`}>instagram</a>
             </header>
             <div class="container-lg custom-summer_teams-area mt-4">
-                <!-- <div class="custom-summer_teams-img">
-                    {!summer_team.data.thumbnail && (
-                        <Image
-                            src={summer_team.data.thumbnail}
-                            alt={summer_team.data.teamName}
-                            class="img-fluid"
-                        />
-                    )}
-                </div> -->
                 <div class="content custom-summer_teams-content">
                     <Content/>
                 </div>
             </div>
 
-            //追加
+            <!-- 追加 -->
             <section class="container-md mt-5 pt-4" style="border-top: 1px solid #ddd;">
                 <h2 class="h2 mb-4">チームの日記</h2>
                 {teamDiaries.length > 0 ? (
                     <ul class="list-unstyled vstack g-3">
                         {teamDiaries.map(diary => {
-                            // URLに使うために日付を "2025-06-22" の形にする
+                            //urlのために日付の形をyyyy-mm-ddに変換
                             const dateStr = diary.data.date.toISOString().split('T')[0];
                             return (
                                 <li>

@@ -50,7 +50,7 @@ const diaryData = {
 
 //変数を埋め込むときはバッククオート
 const breadcrumbs = [
-    { name: 'チーム', item: '/summe/' },
+    { name: '夏チーム', item: '/summe/' },
     { name: teamName, item: `/summer/${teamPath}/` },
     { name: entry.data.title, item: Astro.url.pathname }
 ];
@@ -68,12 +68,12 @@ const breadcrumbs = [
         <article class="">
             <header class="container-md">
                 <ol class="breadcrumb mb-2">
-                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">ホーム</a></li>
-                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="/diary/">劇団員日記</a></li>
+                    <!-- <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">ホーム</a></li> -->
+                    <li class="breadcrumb-item"><a class="breadcrumb-link" href="/summer/">夏チーム</a></li>
                     <li class="breadcrumb-item">
                         <a class="breadcrumb-link"
-                            href={`/diary/${entry.data.date.getFullYear()}/#` + entry.data.date.toISOString().split('T')[0]}>
-                            {entry.data.date.getFullYear()}年
+                            href={`/summer/${teamPath}/`}>
+                            {entry.data.teamName}
                         </a>
                     </li>
                     <li class="breadcrumb-item">{entry.data.title}</li>
@@ -91,7 +91,7 @@ const breadcrumbs = [
                 <hr class="mt-3 divider w-25">
             </div>
             <footer class="mt-5 container-md">
-                <a href="/diary/" class="">一覧に戻る</a>
+                <a href={`/summer/${teamPath}/`} class="">一覧ページに戻る</a>
             </footer>
         </article>
     </main>

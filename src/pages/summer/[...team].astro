@@ -4,41 +4,49 @@ import Layout from '../../layouts/Layout.astro';
 import {Image} from 'astro:assets';
 import ogpImage from '../../assets/ogp.avif';
 
+//URLページの自動生成
 export async function getStaticPaths() {
+    //夏チームの全データをコレクションフォルダ内のsummer_teamsから取得
     const summerTeams = await getCollection('summer_teams');
     
+    //年順に並び替え
     const sorted = summerTeams.sort((a: CollectionEntry<'summer_teams'>, b: CollectionEntry<'summer_teams'>) =>
         b.data.year - a.data.year
     );
+    //チームごとにurlと、ページ内で使うデータを渡す
     return sorted.map((summer_team: CollectionEntry<'summer_teams'>, index: number) => ({
         params: {team: summer_team.id},
         props: {
-            summer_team,
-            prevSummer_team: sorted[index + 1] ?? null,
-            nextSummer_team: sorted[index - 1] ?? null,
+            summer_team,//自分のデータ
+            prevSummer_team: sorted[index + 1] ?? null,//前のチーム
+            nextSummer_team: sorted[index - 1] ?? null,//次のチーム
         },
     }));
 }
 
+//getStaticPathsの受け取り
 const {summer_team, prevSummer_team, nextSummer_team} = Astro.props;
+//マークダウンの中身をhtmlとして表示できるよう変換
 const {Content} = await render(summer_team);
 
 //このチームの日記を取得
 const allDiaries = await getCollection('summer_diary');
 const teamDiaries = allDiaries
-    //チーム名で絞る
+    //日記のid（年/team名/で絞る）
     .filter(diary => diary.id.startsWith(`${summer_team.id}/`))
+    //日付順に並び替え
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-    //日付
+    //日付を日本語に変換
     const formatDate = (date: Date) => {
-        return date.toLocaleDateString('jp-JP',{
+        return date.toLocaleDateString('ja-JP',{
             year: 'numeric',
             month: 'long',
             day: 'numeric',
         });
     };
 
+//サムネイル画像の取得
 const displayImage = summer_team.data.thumbnail ?? ogpImage;
 
 // const summer_teamData = {
@@ -53,6 +61,7 @@ const displayImage = summer_team.data.thumbnail ?? ogpImage;
 //     }))
 // };
 
+//ぱんくずリスト
 const breadcrumbs = [
     {name: '公演', item: '/summer/'},
     {name: summer_team.data.teamName, item: Astro.url.pathname}

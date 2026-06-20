@@ -12,23 +12,27 @@ const sortedSummerTeams = allSummerTeams.sort((a: CollectionEntry<'summer_teams'
     return b.data.year - a.data.year;
 });
 
+//データを年毎にまとめる
 const SummerTeamsByYear = sortedSummerTeams.reduce((acc: Record<number, CollectionEntry<'summer_teams'>[]>, summer_teams: CollectionEntry<'summer_teams'>) => {
     const year = summer_teams.data.year;
     if (!acc[year]) {
         acc[year] = [];
     }
+    //その年に、チームを格納
     acc[year].push(summer_teams);
     return acc;
 }, {} as Record<number, CollectionEntry<'summer_teams'>[]>);
 
+//存在するとしの数字リストと、その並べ替え
 const years = Object.keys(SummerTeamsByYear).map(Number).sort((a: number, b: number) => b - a);
 
-const itemListData = {
-    items: sortedSummerTeams.map(p => ({
-        url: `/summer/${p.id}/`
-    }))
-};
+// const itemListData = {
+//     items: sortedSummerTeams.map(p => ({
+//         url: `/summer/${p.id}/`
+//     }))
+// };
 
+//ぱんくずリスト
 const breadcrumbs = [
     {name: '夏チーム', item: '/summer/'}
 ];
@@ -37,11 +41,10 @@ const breadcrumbs = [
 <Layout
         title="夏チーム"
         description="劇団万絵巻の2025年から現在までの夏チーム一覧です。"
-        schemaType="ItemList"
-        schemaData={itemListData}
         breadcrumbs={breadcrumbs}
 >
     <main>
+        <!-- ぱんくずリスト -->
         <section class="container-md mt-5">
             <ol class="breadcrumb mb-2">
                 <!-- <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">ホーム</a></li> -->
@@ -52,6 +55,7 @@ const breadcrumbs = [
         <nav class="year-nav container-md">
             <div class="year-nav__inner">
                 <ul class="year-nav__list" id="year-nav-list">
+                    <!--上記で作成した年のリスト（years）をループして、ジャンプ用ボタンを生成-->
                     {years.map((year: number) => (
                         <li class="year-nav__item">
                             <a class="badge badge-outline" href={`#${year}`} data-year={year}>{year}</a>
@@ -64,6 +68,7 @@ const breadcrumbs = [
                 <section class="container-md mt-6 year-section" id={year.toString()}>
                     <h2 class="h2">{year}年</h2>
                     <div class="mt-5 vstack g-5">
+                        {/* その年に該当するチームデータを取り出して、表示 */}
                         {SummerTeamsByYear[year].map((summer_team: CollectionEntry<'summer_teams'>) => (
                                 <article class="custom-card">
                                     <div class="custom-card__data">
@@ -81,6 +86,7 @@ const breadcrumbs = [
                                         <a class="btn btn-fill is-sm"
                                           href={`/summer/${summer_team.id}/`}>詳しくみる</a>
                                     </div>
+                                    {/* 画像 */}
                                     <div class="custom-card__img-area">
                                         <Image class="custom-card__img"
                                           src={summer_team.data.thumbnail ?? ogpImage}
@@ -106,13 +112,18 @@ const breadcrumbs = [
 </Layout>
 
 <script>
+  //各年の見出しエリアを全て取得
   const sections = document.querySelectorAll<HTMLElement>('.year-section');
+  //上記のバッジを取得
   const links = document.querySelectorAll<HTMLAnchorElement>('.badge.badge-outline');
 
+  //スクロールに合わせてナビゲーションの色を変える
   const setActive = (id: string) => {
     links.forEach(link => {
+      //見ているセクションの年と一致しているリンクだけ、指定のクラスをつける
       link.classList.toggle('badge-fill', link.dataset.year === id);
     });
+    //アクティブになったリンク（年）が自動で見えるように横スクロール
     const activeLink = document.querySelector<HTMLAnchorElement>(`.year-nav__link[data-year="${id}"]`);
     activeLink?.scrollIntoView({block: 'nearest', inline: 'center'});
   };
@@ -126,6 +137,7 @@ const breadcrumbs = [
         }
       }
     },
+    //アクティブ判定エリア
     {rootMargin: '-10% 0px -80% 0px', threshold: 0}
   );
 

@@ -45,8 +45,8 @@ const summer_teams = defineCollection({
         teamName: z.string(),
         director: z.string(),
         year: z.coerce.number(),
-        twitter: z.string(),
-        instagram: z.string(),
+        twitter: z.string().optional(),
+        instagram: z.string().optional(),
         thumbnail: image(),
     }),
 });

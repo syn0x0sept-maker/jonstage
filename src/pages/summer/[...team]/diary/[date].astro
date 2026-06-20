@@ -2,17 +2,23 @@
 import {getCollection, getEntry, render, type CollectionEntry} from 'astro:content';
 import Layout from '../../../../layouts/Layout.astro';
 
-//teameとdateのフォルダのパスを取得
+//teamとdateのフォルダのパスを取得
 export async function getStaticPaths() {
+    //日記データの取得
     const diaryEntries = await getCollection('summer_diary');
     
+    //日記のurlを作成
     return diaryEntries.map((entry: CollectionEntry<'summer_diary'>) => {
 
+        //日付をyyyy-mm-dd形式に変換
         const dateStr = entry.data.date.toISOString().split('T')[0];
 
+        //フォルダのパスを/で分割
         const parts = entry.id.split('/');
+        //はじめの年とチーム名を合体して親チームのパスを作る（年/チーム名）
         const teamPath = `${parts[0]}/${parts[1]}`;
 
+        //urlとデータを渡す
         return {
             params:{
                 team: teamPath,
@@ -28,9 +34,12 @@ interface Props {
     teamPath: string;
 }
 
+//getStaticPathsから受け取る
 const {entry, teamPath} = Astro.props;
 
+//親チームデータを取得
 const teamData = await getEntry('summer_teams', teamPath);
+//チームの名前を入れる
 const teamName = teamData ? teamData.data.teamName : 'チーム';
 
 const formatDate = (date: Date) => {
@@ -41,12 +50,13 @@ const formatDate = (date: Date) => {
     });
 };
 
+//マークダウンの本文を、htmlで表示できるよう変換
 const {Content} = await render(entry);
 
-const diaryData = {
-    title: entry.data.title,
-    date: entry.data.date.toISOString(),
-};
+// const diaryData = {
+//     title: entry.data.title,
+//     date: entry.data.date.toISOString(),
+// };
 
 //変数を埋め込むときはバッククオート
 const breadcrumbs = [
@@ -60,8 +70,6 @@ const breadcrumbs = [
     title={entry.data.title + " - 劇団員日記"}
     description={`${formatDate(entry.data.date)}の劇団員日記「${entry.data.title}」です。`}
     type="article"
-    schemaType="BlogPosting"
-    schemaData={diaryData}
     breadcrumbs={breadcrumbs}
 >
     <main class="mt-5">

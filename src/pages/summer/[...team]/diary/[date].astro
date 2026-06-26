@@ -1,6 +1,6 @@
 ---
 import {getCollection, getEntry, render, type CollectionEntry} from 'astro:content';
-import Layout from '../../../../layouts/Layout.astro';
+import NoIndexLayout from '../../../../layouts/NoIndexLayout.astro';
 
 //teamとdateのフォルダのパスを取得
 export async function getStaticPaths() {
@@ -66,7 +66,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout
+<NoIndexLayout
     title={entry.data.title + " - 劇団員日記"}
     description={`${formatDate(entry.data.date)}の劇団員日記「${entry.data.title}」です。`}
     type="article"
@@ -103,4 +103,4 @@ const breadcrumbs = [
             </footer>
         </article>
     </main>
-</Layout>
+</NoIndexLayout>

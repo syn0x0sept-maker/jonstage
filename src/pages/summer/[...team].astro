@@ -1,6 +1,6 @@
 ---
 import {getCollection, render, type CollectionEntry} from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import NoIndexLayout from '../../layouts/NoIndexLayout.astro';
 import {Image} from 'astro:assets';
 import ogpImage from '../../assets/ogp.avif';
 
@@ -68,7 +68,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout
+<NoIndexLayout
         title={summer_team.data.teamName + " - 公演"}
         description={summer_team.data.director}
         image={displayImage.src}
@@ -146,7 +146,7 @@ const breadcrumbs = [
             </footer>
         </article>
     </main>
-</Layout>
+</NoIndexLayout>
 
 <style lang="scss">
   .perf-footer {

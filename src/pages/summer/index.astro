@@ -1,7 +1,7 @@
 ---
 import {Image} from 'astro:assets';//astrの画像コンポーネント
 import {getCollection, type CollectionEntry} from 'astro:content';//コレクションの取得関数と、型定義をインポート
-import Layout from '../../layouts/Layout.astro';//レイアウトをインポート
+import NoIndexLayout from '../../layouts/NoIndexLayout.astro';//レイアウトをインポート
 import ogpImage from '../../assets/ogp.avif';//記事に画像がない場合のデフォルト画像をインポート
 
 //指定フォルダ内の全てのマークダウンを取得して格納
@@ -38,7 +38,7 @@ const breadcrumbs = [
 ];
 ---
 
-<Layout
+<NoIndexLayout
         title="夏チーム"
         description="劇団万絵巻の2025年から現在までの夏チーム一覧です。"
         breadcrumbs={breadcrumbs}
@@ -109,7 +109,7 @@ const breadcrumbs = [
             </div>
         </section>
     </main>
-</Layout>
+</NoIndexLayout>
 
 <script>
   //各年の見出しエリアを全て取得

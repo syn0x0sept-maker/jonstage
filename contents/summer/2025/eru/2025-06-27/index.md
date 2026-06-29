@@ -1,10 +1,7 @@
 ---
 title: "楽しい夏にするぞー！！おーー！！"
 date: 2025-06-27
-teamName: "太陽にほえる！"
 ---
-
-P {margin-top:0;margin-bottom:0;}
 
 どうも、3回生、30期の慧流です！
 

@@ -54,4 +54,15 @@ const summerTeams = defineCollection({
     }),
 });
 
-export const collections = {performances, diary, summerTeams};
+const summerDiaries = defineCollection({
+    loader: glob({
+        base: "./contents/summer",
+        pattern: "*/*/*/index.md",
+    }),
+    schema: ({image}) => z.object({
+        title: z.string(),
+        date: z.coerce.date(),
+    }),
+});
+
+export const collections = {performances, diary, summerTeams, summerDiaries};

@@ -1,7 +1,6 @@
 ---
 title: "えちゅーどってむずかしいね"
 date: 2025-07-05
-teamName: "HAMBUぐっと！イドキュア♡"
 ---
 
 P {margin-top:0;margin-bottom:0;}

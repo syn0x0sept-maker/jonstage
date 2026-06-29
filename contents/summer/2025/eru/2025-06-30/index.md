@@ -1,10 +1,7 @@
 ---
 title: "はじめまして！"
 date: 2025-06-30
-teamName: "太陽にほえる！"
 ---
-
-P {margin-top:0;margin-bottom:0;}
 
 はじめまして！１回生のぴーちぇと申します。
 

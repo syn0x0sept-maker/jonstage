@@ -110,6 +110,16 @@ const breadcrumbs = [
                         </article>
                 ))}
             </div>
+            <div class="container-md mt-5">
+                <p class="h4">{year}年の劇団員日記をお届けしました。</p>
+                <ul class="utilitylink-units mt-3 flex-wrap">
+                    {years.map(y => (
+                            <li class="utilitylink-item">
+                                <a href={`/diary/${y}/`} class="utilitylink">{y}年</a>
+                            </li>
+                    ))}
+                </ul>
+            </div>
         </section>
     </main>
 </Layout>

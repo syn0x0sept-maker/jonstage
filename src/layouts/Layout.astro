@@ -1,6 +1,4 @@
 ---
-import 'asagaoui/dist/css/asagaoui.css'
-import 'asagaoui/dist/css/asagaoui-icons.min.css'
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Favicon from '../components/head/Favicon.astro';
@@ -25,6 +23,9 @@ const {title, description, image, type, schemaType = 'TheaterGroup', schemaData 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="generator" content={Astro.generator}/>
+    <link href="https://cdn.jsdelivr.net/npm/asagaoui@0.1.9/dist/css/asagaoui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asagaoui@0.1.9/dist/css/asagaoui-icons.min.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/asagaoui/dist/js/asagaoui.min.js"></script>
     <SEO {title} {description} {image} {type}/>
     <SchemaOrg type={schemaType} data={schemaData} {breadcrumbs}/>
     {/* Favicon */}

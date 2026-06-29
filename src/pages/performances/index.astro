@@ -120,7 +120,7 @@ const breadcrumbs = [
     links.forEach(link => {
       link.classList.toggle('badge-fill', link.dataset.year === id);
     });
-    const activeLink = document.querySelector<HTMLAnchorElement>(`.year-nav__link[data-year="${id}"]`);
+    const activeLink = document.querySelector<HTMLAnchorElement>(`.badge.badge-outline[data-year="${id}"]`);
     activeLink?.scrollIntoView({block: 'nearest', inline: 'center'});
   };
 
@@ -163,33 +163,6 @@ const breadcrumbs = [
       padding: .625rem 1rem;
       width: max-content;
       min-width: 100%;
-    }
-
-    &__link {
-      display: block;
-      padding: .3rem .9rem;
-      border: 1.5px solid #c0c0c0;
-      border-radius: 2rem;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-decoration: none;
-      color: #555;
-      white-space: nowrap;
-      transition: background .18s, color .18s, border-color .18s, transform .1s;
-
-      &:hover {
-        background: #111;
-        color: #fff;
-        border-color: #111;
-        transform: translateY(-1px);
-      }
-
-      &.is-active {
-        background: #111;
-        color: #fff;
-        border-color: #111;
-      }
     }
   }
 

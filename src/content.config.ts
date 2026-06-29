@@ -39,27 +39,19 @@ const diary = defineCollection({
     }),
 });
 
-const summer_teams = defineCollection({
-    loader: glob({pattern: '**/index.md', base: './contents/summer_teams'}),
+const summerTeams = defineCollection({
+    loader: glob({
+        base: "./contents/summer",
+        pattern: "*/*/index.md",
+    }),
     schema: ({image}) => z.object({
-        teamName: z.string(),
-        director: z.string(),
-        year: z.coerce.number(),
-        twitter: z.string().optional(),
-        instagram: z.string().optional(),
-        thumbnail: image(),
+        name: z.string(),
+        year: z.number(),
+        director: z.string().optional(),
+        twitter: z.url().optional(),
+        instagram: z.url().optional(),
+        thumbnail: image().optional(),
     }),
 });
 
-const summer_diary = defineCollection({
-    loader: glob({pattern: '**/index.md', base: './contents/summer_diary'}),
-    schema: z.object({
-        title: z.string(),
-        date: z.coerce.date(),
-        teamName: z.string().optional(),
-    }),
-});
-
-export const collections = {performances, diary, summer_teams, summer_diary};
-
-//.optionalで任意
+export const collections = {performances, diary, summerTeams};

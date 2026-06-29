@@ -127,6 +127,53 @@ offers:
 | `thumbnail`     | —  | サムネイル画像パス                                       |
 | `offers`        | —  | 料金情報（配列）。`label` にチケット種別、`price` に金額（円・数字のみ）を入力 |
 
+### Summer（夏公演/チーム制）
+
+各ファイルに以下のフロントマターを設定してください。
+
+```yaml
+---
+name: "公演のタイトル"
+startDate: 2019-07-01
+endDate: 2019-07-26
+category: "2006年度秋公演"
+venue:
+  name: "劇場名"
+  address: "東京都渋谷区..."
+playwright: "劇作家（脚本家）"
+director: "演出"
+excerpt: "この公演のあらすじや説明"
+flyer:
+  front: "./poster-front.jpg"
+  back: "./poster-back.jpg"
+thumbnail: "./hero.avif"
+offers:
+  - label: "前売り一般"
+    price: 1500
+  - label: "当日一般"
+    price: 2000
+  - label: "学生"
+    price: 1000
+  - label: "無料"
+    price: 0
+---
+```
+
+| フィールド           | 必須 | 説明                                              |
+|-----------------|:--:|-------------------------------------------------|
+| `name`          | ✅  | 公演名                                             |
+| `startDate`     | ✅  | 公演開始日（`YYYY-MM-DD` 形式）                          |
+| `endDate`       | —  | 公演終了日（`YYYY-MM-DD` 形式）                          |
+| `venue.name`    | —  | 会場名                                             |
+| `venue.address` | —  | 会場住所                                            |
+| `playwright`    | —  | 作家・脚本家名                                         |
+| `director`      | —  | 演出名                                             |
+| `excerpt`       | —  | あらすじ・紹介文                                        |
+| `flyer.front`   | —  | ビラ表面の画像パス                                       |
+| `flyer.back`    | —  | ビラ裏面の画像パス                                       |
+| `thumbnail`     | —  | サムネイル画像パス                                       |
+| `offers`        | —  | 料金情報（配列）。`label` にチケット種別、`price` に金額（円・数字のみ）を入力 |
+
 ## コマンド一覧
 
 すべてのコマンドは、**プロジェクトのルートディレクトリ**で実行してください。

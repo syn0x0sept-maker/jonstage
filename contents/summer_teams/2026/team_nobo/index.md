@@ -1,8 +1,8 @@
 ---
-teamName: "チームのぼ"
-director: "3号"
+teamName: "トレーノ・ボルテージ"
+director: "のぼーる3号"
 year: 2026
-twitter: "nobonobo"
-instagram: "nobo"
+twitter: "trenovoltage3"
+instagram: "trenovoltage3"
 thumbnail: "./hero.avif"
 ---

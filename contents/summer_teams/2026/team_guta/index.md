@@ -1,8 +1,8 @@
 ---
-teamName: "チームぐぅた"
+teamName: "せんざいいちぐぅとぴあ"
 director: "ぐぅた"
 year: 2026
-twitter: "guuta"
-instagram: "guuta"
+twitter: "1000zai1Gutopia"
+instagram: "1000zai1guutopia"
 thumbnail: "./hero.avif"
 ---

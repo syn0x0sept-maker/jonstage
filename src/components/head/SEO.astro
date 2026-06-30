@@ -40,8 +40,7 @@ const fullTitle = title ? `${title} - 劇団万絵巻` : "劇団万絵巻 - 関�
 <meta property="twitter:image" content={new URL(image, Astro.url)}/>
 
 {import.meta.env.PROD && (
-<!-- Matomo -->
-<script>
+<script is:inline>
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
@@ -54,5 +53,4 @@ const fullTitle = title ? `${title} - 劇団万絵巻` : "劇団万絵巻 - 関�
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
 </script>
-<!-- End Matomo Code -->
 )}

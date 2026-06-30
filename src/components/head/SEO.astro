@@ -38,3 +38,21 @@ const fullTitle = title ? `${title} - 劇団万絵巻` : "劇団万絵巻 - 関�
 <meta property="twitter:title" content={fullTitle}/>
 <meta property="twitter:description" content={description}/>
 <meta property="twitter:image" content={new URL(image, Astro.url)}/>
+
+{import.meta.env.PROD && (
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//analytics.ctpena.net/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- End Matomo Code -->
+)}

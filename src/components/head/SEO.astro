@@ -5,6 +5,7 @@ interface Props {
     image?: string;
     canonicalURL?: URL;
     type?: 'website' | 'article';
+    noindex?: boolean;
 }
 
 const {
@@ -13,6 +14,7 @@ const {
     image = "/ogp.png",
     canonicalURL = new URL(Astro.url.pathname, Astro.site),
     type = 'website',
+    noindex = false,
 } = Astro.props;
 
 const fullTitle = title ? `${title} - 劇団万絵巻` : "劇団万絵巻 - 関西大学演劇サークル";
@@ -20,6 +22,7 @@ const fullTitle = title ? `${title} - 劇団万絵巻` : "劇団万絵巻 - 関�
 <!-- Global Metadata -->
 <title>{fullTitle}</title>
 <meta name="description" content={description ? description : ""}/>
+{noindex && <meta name="robots" content="noindex, nofollow" />}
 <link rel="canonical" href={canonicalURL}/>
 
 <!-- Open Graph / Facebook -->

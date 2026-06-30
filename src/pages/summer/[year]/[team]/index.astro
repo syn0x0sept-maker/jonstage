@@ -1,0 +1,167 @@
+---
+import {getCollection, render} from 'astro:content';
+import {Image} from 'astro:assets';
+import Layout from '../../../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+    const teams = await getCollection('summerTeams');
+    return teams.map(team => {
+        const [year, name] = team.id.split('/');
+        return {
+            params: {year, team: name},
+            props: {team},
+        };
+    });
+}
+
+const {year, team: teamName} = Astro.params;
+const {team} = Astro.props;
+
+const diaries = await getCollection('summerDiaries', (entry) => {
+    return entry.id.startsWith(`${year}/${teamName}/`);
+});
+
+const sortedDiaries = diaries.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const breadcrumbs = [
+    {name: '夏チーム', item: '/summer/'},
+    {name: team.data.name, item: Astro.url.pathname}
+];
+
+const formatDate = (date: Date) => {
+    return date.toLocaleDateString('ja-JP', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+};
+---
+
+<Layout
+        title={`${team.data.name} - ${year}年夏チーム`}
+        description={`${year}年夏チーム「${team.data.name}」の紹介と活動日記です。`}
+        breadcrumbs={breadcrumbs}
+        noindex={true}
+>
+    <main>
+        <section class="container-md mt-5">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">ホーム</a></li>
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="/summer/">夏チーム</a></li>
+                <li class="breadcrumb-item">{team.data.name}</li>
+            </ol>
+            <h1 class="h1">{team.data.name}</h1>
+            <p class="mt-2">{year}年 夏チーム</p>
+        </section>
+
+        <section class="container-md mt-6">
+            <div class="team-header">
+                {team.data.thumbnail && (
+                        <div class="team-header__img">
+                            <Image src={team.data.thumbnail} alt={team.data.name} class="img-fluid"/>
+                        </div>
+                )}
+                <div class="team-header__info mt-4">
+                    <dl class="description-list">
+                        {team.data.director && (
+                                <>
+                                    <dt>演出</dt>
+                                    <dd>{team.data.director}</dd>
+                                </>
+                        )}
+                        <dt>リンク</dt>
+                        <dd>
+                            <div class="hstack g-3">
+                                {team.data.twitter && (
+                                        <a href={team.data.twitter} class="btn btn-outline is-sm" target="_blank"
+                                           rel="noopener noreferrer">X (Twitter)</a>
+                                )}
+                                {team.data.instagram && (
+                                        <a href={team.data.instagram} class="btn btn-outline is-sm" target="_blank"
+                                           rel="noopener noreferrer">Instagram</a>
+                                )}
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-md mt-8">
+            <h2 class="h2 mb-4">活動日記</h2>
+            {sortedDiaries.length > 0 ? (
+                    <div class="v-stack g-4">
+                        {sortedDiaries.map(diary => (
+                                <article class="diary-card">
+                                    <a href={`/summer/${year}/${teamName}/${diary.id.split('/')[2]}/`} class="diary-card__link">
+                                        <time datetime={diary.data.date.toISOString()}>{formatDate(diary.data.date)}</time>
+                                        <h3 class="h3 diary-card__title">{diary.data.title}</h3>
+                                    </a>
+                                </article>
+                        ))}
+                    </div>
+            ) : (
+                    <p>まだ日記がありません。</p>
+            )}
+        </section>
+    </main>
+</Layout>
+
+<style lang="scss">
+  .team-header {
+    &__img {
+      max-width: 800px;
+      margin: 0 auto;
+      border: 1px solid #949494;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .description-list {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+    border-top: 1px solid #e0e0e0;
+
+    dt {
+      padding: 1rem 0;
+      font-weight: bold;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    dd {
+      padding: 1rem 0;
+      margin: 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  }
+
+  .diary-card {
+    border-bottom: 1px solid #e0e0e0;
+
+    &__link {
+      display: block;
+      padding: 1.5rem 0;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    time {
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    &__title {
+      margin-top: 0.5rem;
+    }
+  }
+</style>
